@@ -1,3 +1,9 @@
+.container{
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+}
+
 .mainText {
     color:white;
     font-family: mBlack;
@@ -112,15 +118,12 @@ video{
     position:absolute;
     z-index: -1;
     left: 0;
-    height: 750px;
+    height: 730px;
     width: 100%;
     object-fit: cover;
     -o-object-fit: cover;
     margin: 0 auto;
-
 }
 
-
 .content {
-    
 }

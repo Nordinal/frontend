@@ -1,0 +1,21 @@
+.mainText{
+    font-family: mRegular;
+    font-size: 18px;
+    margin-top: 25px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.plus{
+    margin-left: 15px;
+}
+
+.container{
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+}

@@ -4,7 +4,7 @@ import {connect} from 'react-redux'
 
 const mstp = (state) => {
     return {
-        
+        reducer: state.reducerSection2
     };
 }
 
@@ -14,7 +14,7 @@ const mdtp = (state) => {
     };
 }
 
-const ProffesionContainer = connect(mstp, mdtp)(Section2);
+const Section2Container = connect(mstp, mdtp)(Section2);
 
 
-export default ProffesionContainer;
+export default Section2Container;

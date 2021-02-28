@@ -8,10 +8,6 @@
     src: url('fonts/MyriadPro-Black.ttf');
 }
 
-body{
-    background: #000;
-}
-
 :root {
     --main-btn-orange: linear-gradient(154.79deg, #F2C94C 1.6%, #F5B67A 99.43%);
     --main-btn-blue: linear-gradient(154.79deg, #2F80ED 1.6%, #4D55F0 99.43%);
