@@ -1,0 +1,28 @@
+.logo {
+    width: 56px;
+    height: 71px;
+    color: white;
+}
+
+.profile{ 
+    width: 40px;
+    height: 40px;
+}
+
+.link{
+    color: white;
+    text-decoration: none;
+
+    font-family: mRegular;
+    font-size: 16px;
+}
+
+.link:not(:first-child){
+    margin-left: 60px;
+}
+
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

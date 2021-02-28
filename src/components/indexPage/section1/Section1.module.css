@@ -1,0 +1,126 @@
+.mainText {
+    color:white;
+    font-family: mBlack;
+    font-size: 36px;
+
+    position: relative;
+}
+
+.mainText::before{
+    content: '';
+    position: absolute;
+    border-bottom: 3px solid #2F80ED;
+    width: 15%;
+    height: 100%;
+    margin-top: 7px;
+}
+
+.descText {
+    color:white;
+    font-family: mRegular;
+    font-size: 18px;
+}
+
+.btn {
+    color: black;
+    text-decoration: none;
+
+    font-family: mBlack;
+    font-size: 18px;
+    background: var(--main-btn-orange);
+    padding: 14px 36px;
+    border-radius: 100px;
+}
+
+.btnDiv{
+    margin-top: 35px;
+}
+
+.i11{ 
+    width: 697px;
+    height: 474px;
+    position: absolute;
+    z-index: -1;
+}
+
+.main{
+    display: flex;
+}
+
+.rigthContent {
+    position: relative;
+    margin-left: 60px;
+    margin-top: 90px;
+}
+
+.btnEngineer {
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+    font-family: mRegular;
+    font-size: 18px;
+    position: absolute;
+    z-index: 1;
+    left: 50px;
+    top: 364px;
+
+}
+
+.leftContent {
+    width: 540px;
+    margin-top: 200px
+}
+
+.imgText{
+    position: absolute;
+    color: white;
+    font-family: mBlack;
+    font-size: 40px;
+
+    left: 50px;
+    top: 224px;
+}
+
+.footer {
+    margin-top: 180px;
+    display: flex;
+    
+}
+
+.tel {
+    color: rgba(255,255,255,0.5);
+    margin: 0 0 5px 0;
+
+    font-family: mRegular;
+    font-size: 18px;
+}
+.zid {
+    color: white;
+    margin: 0;
+
+    font-family: mRegular;
+    font-size: 18px;
+}
+
+.geoDiv{
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+video{
+    position:absolute;
+    z-index: -1;
+    left: 0;
+    height: 750px;
+    width: 100%;
+    object-fit: cover;
+    -o-object-fit: cover;
+    margin: 0 auto;
+
+}
+
+
+.content {
+    
+}
