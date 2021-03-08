@@ -1,0 +1,57 @@
+.container{
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.title {
+    margin-top: 90px;
+    margin-bottom: 0px;
+
+    font-family: mBlack;
+    font-size: 24px;
+}
+
+.vector {
+    margin-left: 15px;
+}
+
+.instituteDiv {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.institute{
+    padding: 20px;
+}
+
+.circle{
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    background: var(--main-btn-orange);
+}
+
+.circleRed{
+    background: var(--main-btn-red)
+}
+
+.between {
+    display: flex;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.circle:not(:first-child){
+    margin-left: 15px;
+}
+
+.betweenText{
+    margin-left: 15px;
+    font-family: mRegular;
+    font-size: 18px;
+}
+
+.directionDiv{
+    display: flex;
+}

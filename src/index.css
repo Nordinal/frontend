@@ -11,6 +11,7 @@
 :root {
     --main-btn-orange: linear-gradient(154.79deg, #F2C94C 1.6%, #F5B67A 99.43%);
     --main-btn-blue: linear-gradient(154.79deg, #2F80ED 1.6%, #4D55F0 99.43%);
+    --main-btn-red: linear-gradient(154.79deg, #ED6981 1.6%, #EB5757 99.43%);
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */

@@ -1,0 +1,40 @@
+.container {
+    background-color: rgba(0,0,0,.5);
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+
+    transition: all 0.2s ;
+}
+
+.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.content {
+    max-height: 75vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 2;
+    width: 1170px;
+    padding: 20px;
+    background-color: white;
+    display: flex;
+}
+
+.img {
+    width: 500px;
+}
+
+.imgDiv {
+    display: flex;
+    flex-direction: column;
+}

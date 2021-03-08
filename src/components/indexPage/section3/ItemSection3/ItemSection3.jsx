@@ -1,7 +1,6 @@
 import s from './ItemSection3.module.css'
 
 const ItemSection3 = (props) => {
-    debugger;
     if(props.index % 2 == 0){
         return(
             <div className={s.content}>
