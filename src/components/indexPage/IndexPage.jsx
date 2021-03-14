@@ -4,6 +4,8 @@ import s from './IndexPage.module.css'
 import Section3Container from "./section3/Section3Container"
 import Section4Container from "./section4/Section4Container"
 import Section5Container from "./section5/Section5Container"
+import Section6Container from "./section6/Section6Container"
+import Section7Container from "./section7/Section7Container"
 
 const IndexPage = () => {
 
@@ -14,6 +16,8 @@ const IndexPage = () => {
             <Section3Container />
             <Section4Container />
             <Section5Container />
+            <Section6Container />
+            <Section7Container />
         </div>
     );
 }

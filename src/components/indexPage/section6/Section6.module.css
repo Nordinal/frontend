@@ -1,0 +1,20 @@
+.container {
+    max-width: 1170px;
+    width: 100%;
+    margin: 90px auto 0 auto;
+}
+
+.slick {
+    color: black;
+}
+
+.vector{
+    width: 20px;
+    margin-left: 15px;
+}
+
+.title{
+    font-family: mBlack;
+    font-size: 24px;
+    margin-bottom: 10px;
+}

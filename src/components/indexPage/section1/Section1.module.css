@@ -74,7 +74,7 @@
 
 .leftContent {
     width: 540px;
-    margin-top: 200px
+    margin-top: 200px;
 }
 
 .imgText{
@@ -90,7 +90,6 @@
 .footer {
     margin-top: 180px;
     display: flex;
-    
 }
 
 .tel {
@@ -114,16 +113,16 @@
     margin-right: 10px;
 }
 
-video{
+.video{
     position:absolute;
-    z-index: -1;
+    z-index: 0;
     left: 0;
     height: 730px;
     width: 100%;
     object-fit: cover;
     -o-object-fit: cover;
     margin: 0 auto;
-}
 
-.content {
+    z-index: -1;
+    background: #555;
 }

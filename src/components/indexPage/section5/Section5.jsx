@@ -9,7 +9,6 @@ import Direction from './direction/Direction'
 const Section5 = (props) => {
     const direction = props.reducer.institute[props.reducer.active].direction;
     const active = props.reducer.active;
-    debugger;
 
     const [isActive, setIsActive] = useState(direction.map( () => false));
     console.log(isActive);

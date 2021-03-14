@@ -3,7 +3,6 @@ import institute from '../../../../img/institute.svg'
 
 
 const Institute = ({updateActive, img, text, isActive}) => {
-    debugger;
     return (
         <div onClick={updateActive} className={s.container}>
             <img src={institute} className={s.institute} alt='Подробнее'/>
