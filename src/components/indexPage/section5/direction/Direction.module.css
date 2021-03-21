@@ -10,7 +10,7 @@
 }
 
 .content {
-    width: 250px;
+    width: 270px;
     display: flex;
     flex-direction: column;
     background: var(--main-btn-red);

@@ -8,7 +8,7 @@
     flex-direction: column;
     justify-content: space-between;
 
-    transition: all .2s linear;
+    transition: all .1s linear;
     cursor: pointer;
 }
 
