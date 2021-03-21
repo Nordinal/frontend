@@ -38,6 +38,10 @@
     border-radius: 100px;
 }
 
+.btn:hover{
+    box-shadow: 0 0 20px rgba(244, 191, 100, 0.5);
+}
+
 .btnDiv{
     margin-top: 35px;
 }
@@ -70,12 +74,19 @@
     left: 50px;
     top: 364px;
 
+    transition: all .2s linear;
+}
+
+.btnEngineer:hover{
+    color: #999;
+    border-bottom: 1px solid #999;
 }
 
 .leftContent {
     width: 540px;
     margin-top: 200px;
 }
+
 
 .imgText{
     position: absolute;
@@ -84,7 +95,7 @@
     font-size: 40px;
 
     left: 50px;
-    top: 224px;
+    top: 254px;
 }
 
 .footer {

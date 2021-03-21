@@ -2,7 +2,6 @@ import s from './Modal.module.css'
 
 
 const Modal = ({active, setActive, children}) => {
-    console.log(active)
     return (
         <div className={active ? s.container + ' ' + s.active : s.container} onClick={setActive}>
             <div className={s.content} onClick={(e) => e.stopPropagation()}>

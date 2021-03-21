@@ -6,6 +6,8 @@ import Section4Container from "./section4/Section4Container"
 import Section5Container from "./section5/Section5Container"
 import Section6Container from "./section6/Section6Container"
 import Section7Container from "./section7/Section7Container"
+import Section8Container from "./section8/Section8Container"
+import Section9Container from "./section9/Section9Container"
 
 const IndexPage = () => {
 
@@ -18,6 +20,8 @@ const IndexPage = () => {
             <Section5Container />
             <Section6Container />
             <Section7Container />
+            <Section8Container />
+            <Section9Container />
         </div>
     );
 }
