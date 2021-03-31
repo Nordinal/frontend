@@ -9,6 +9,7 @@ import Section7Container from "./section7/Section7Container"
 import Section8Container from "./section8/Section8Container"
 import Section9Container from "./section9/Section9Container"
 import Section10Container from "./section10/Section10Container"
+import Section11Container from "./section11/Section11Container"
 
 const IndexPage = () => {
 
@@ -24,6 +25,7 @@ const IndexPage = () => {
             <Section8Container />
             <Section9Container />
             <Section10Container />
+            <Section11Container />
         </div>
     );
 }

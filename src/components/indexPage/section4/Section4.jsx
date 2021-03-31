@@ -7,7 +7,7 @@ import s44 from '../../../img/section44.svg'
 
 const Section4 = () => {
     return(
-        <div className={s.container}>
+        <div className={s.container} id="section4">
             <div className={s.mainTextDiv}>
                 <h3 className={s.mainText}>Целевое обучение - большое преимущество<img src={vector}/></h3>
             </div>

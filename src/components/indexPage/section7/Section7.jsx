@@ -4,7 +4,7 @@ import ItemSection7 from './itemSection7/ItemSection7';
 
 const Section7 = (props) => {
     return (
-        <div className={s.container}>
+        <div className={s.container} id="section7">
             <h2 className={s.title}>Мы предлагаем<img src={vector} className={s.vector}/></h2>
             <div>
                 {props.reducer.content.map((item, index) => <ItemSection7 name={item.name} img={item.img} key={index}/>)}

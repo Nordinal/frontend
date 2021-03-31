@@ -19,13 +19,13 @@ const Section1 = () => {
                         <h1 className={s.mainText}>Целевое обучение</h1>
                         <p className={s.descText}>ЗИД предоставляет возможность построения профессиональной карьеры по выбранному направлению подготовки или специальности вуза</p>
                         <div className={s.btnDiv}>
-                        <a href='' className={s.btn}>Узнать подробнее</a>
+                        <a href='#section3' className={s.btn}>Узнать подробнее</a>
                         </div>
                     </div>
                     <div className={s.rigthContent}>
                         <img src={i11} alt='Становись инженером' className={s.i11} />
                         <h2 className={s.imgText}>Становись инженером</h2>
-                        <a href="" className={s.btnEngineer}>Инженеры🠒</a>
+                        <a href="#section6" className={s.btnEngineer}>Инженеры🠒</a>
                     </div>
                 </div>
                 <div className={s.footer}>

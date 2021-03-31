@@ -7,7 +7,6 @@ import vector from '../../../img/vector.svg'
 import ItemSection8 from './itemSection8/ItemSection8';
 
 const Section8 = (props) => {
-    debugger
     const settings = {
       dots: true,
       infinite: true,
@@ -18,7 +17,7 @@ const Section8 = (props) => {
     }
     const items = props.reducer.content.map((item, index) => <ItemSection8 title={item.title} text={item.text} img={item.img} url={item.url} />);
     return (
-      <div className={s.container}>
+      <div className={s.container} id="section8">
         <h2 className={s.title}>Наша продукция<img src={vector} className={s.vector}/></h2>
         <Slider {...settings}>
             {items}
