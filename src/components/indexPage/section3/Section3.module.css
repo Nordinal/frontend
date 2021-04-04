@@ -6,15 +6,31 @@
 
 .vector{
     margin-left: 15px;
+    transition: transform .4s linear;
 }
 
 .content {
     margin-top: 40px;
     margin-bottom: 0;
+    position: relative;
 }
 
 .container{
     max-width: 1170px;
     width: 100%;
     margin: 0 auto;
+    
+}
+.rotate{
+    transform: rotate(0.25turn);
+}
+
+.items{
+
+    transition: all .4s linear;
+}
+
+.disable{
+    transform: scale(0) translate(-100%,-100%);
+    position: absolute;
 }

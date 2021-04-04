@@ -1,3 +1,4 @@
+import 'react-app-polyfill/ie11';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -6,13 +7,14 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from 'react-router-dom';
 import {Provider} from 'react-redux'
-import anchors from './components/scripts/anchors'
+import anchors from './components/scripts/anchors';
+import { CssVarsPonyfill } from 'css-vars-ponyfill-react';
 anchors();
-debugger;
+CssVarsPonyfill();
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Provider store={store}>
         <App />
       </Provider>
