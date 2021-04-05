@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/frontend/static/css/main.e92c0d40.chunk.css",
-    "main.js": "/frontend/static/js/main.6bf0c015.chunk.js",
-    "main.js.map": "/frontend/static/js/main.6bf0c015.chunk.js.map",
-    "runtime-main.js": "/frontend/static/js/runtime-main.efc0f5b9.js",
-    "runtime-main.js.map": "/frontend/static/js/runtime-main.efc0f5b9.js.map",
+    "main.css": "/frontend/static/css/main.4172fa1e.chunk.css",
+    "main.js": "/frontend/static/js/main.0287a217.chunk.js",
+    "main.js.map": "/frontend/static/js/main.0287a217.chunk.js.map",
+    "runtime-main.js": "/frontend/static/js/runtime-main.5f5f779a.js",
+    "runtime-main.js.map": "/frontend/static/js/runtime-main.5f5f779a.js.map",
     "static/css/2.18db1b1c.chunk.css": "/frontend/static/css/2.18db1b1c.chunk.css",
-    "static/js/2.fcf840f6.chunk.js": "/frontend/static/js/2.fcf840f6.chunk.js",
-    "static/js/2.fcf840f6.chunk.js.map": "/frontend/static/js/2.fcf840f6.chunk.js.map",
-    "static/js/3.763ac39b.chunk.js": "/frontend/static/js/3.763ac39b.chunk.js",
-    "static/js/3.763ac39b.chunk.js.map": "/frontend/static/js/3.763ac39b.chunk.js.map",
+    "static/js/2.b91b3800.chunk.js": "/frontend/static/js/2.b91b3800.chunk.js",
+    "static/js/2.b91b3800.chunk.js.map": "/frontend/static/js/2.b91b3800.chunk.js.map",
+    "static/js/3.c18a5958.chunk.js": "/frontend/static/js/3.c18a5958.chunk.js",
+    "static/js/3.c18a5958.chunk.js.map": "/frontend/static/js/3.c18a5958.chunk.js.map",
     "index.html": "/frontend/index.html",
     "static/css/2.18db1b1c.chunk.css.map": "/frontend/static/css/2.18db1b1c.chunk.css.map",
-    "static/css/main.e92c0d40.chunk.css.map": "/frontend/static/css/main.e92c0d40.chunk.css.map",
-    "static/js/2.fcf840f6.chunk.js.LICENSE.txt": "/frontend/static/js/2.fcf840f6.chunk.js.LICENSE.txt",
+    "static/css/main.4172fa1e.chunk.css.map": "/frontend/static/css/main.4172fa1e.chunk.css.map",
+    "static/js/2.b91b3800.chunk.js.LICENSE.txt": "/frontend/static/js/2.b91b3800.chunk.js.LICENSE.txt",
     "static/media/11.17101774.png": "/frontend/static/media/11.17101774.png",
     "static/media/11.2a16cd51.mp4": "/frontend/static/media/11.2a16cd51.mp4",
     "static/media/index.css": "/frontend/static/media/MyriadPro-Regular.498d9244.ttf",
@@ -37,10 +37,10 @@
     "static/media/youtube.45c13497.svg": "/frontend/static/media/youtube.45c13497.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.efc0f5b9.js",
+    "static/js/runtime-main.5f5f779a.js",
     "static/css/2.18db1b1c.chunk.css",
-    "static/js/2.fcf840f6.chunk.js",
-    "static/css/main.e92c0d40.chunk.css",
-    "static/js/main.6bf0c015.chunk.js"
+    "static/js/2.b91b3800.chunk.js",
+    "static/css/main.4172fa1e.chunk.css",
+    "static/js/main.0287a217.chunk.js"
   ]
 }
