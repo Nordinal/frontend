@@ -3,6 +3,7 @@ import exit from '../../img/exit.svg'
 import Parse from 'html-react-parser'
 
 
+
 const Modal = ({active, setActive, children}) => {
     return (
         <div className={active ? s.container + ' ' + s.active : s.container} onClick={setActive}>

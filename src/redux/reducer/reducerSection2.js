@@ -29,10 +29,18 @@ const reducerSection2 = (state = initialStore, action = {}) => {
             }
         };
         case CHANGE_TEG_PERSON: {
-            return{
-                ...state,
-                tagPerson: [...state.tagPerson, state.newTag],
-                newTag: ''
+            if(state.newTag){
+                return{
+                    ...state,
+                    tagPerson: [...state.tagPerson, state.newTag],
+                    newTag: ''
+                }
+            }else{
+                return{
+                    ...state,
+                    tagPerson: [...state.tagPerson],
+                    newTag: ''
+                }
             }
         }
         default:

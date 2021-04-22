@@ -4,19 +4,19 @@ const initialState = {
     content: [
         {
             name: 'Широкий спектр проведения научно-исследовательских и опытно-конструкторских работ',
-            img: 'https://sun9-40.userapi.com/impg/d8XPseG_JPWumEVfiIKXGloMMBZGv4c0XGlyOw/z_0p6kneW8w.jpg?size=640x356&quality=96&sign=4c55c35414be8a8fc4bb501bbc28f1c1&type=album',
+            img: 'https://i.ibb.co/r42k53M/FOT2432.jpg',
         },
         {
             name: 'Мощная производственная база подготовки производства',
-            img: 'https://sun9-49.userapi.com/impg/IZYZLqK9q07Q-XR5HNN2Hh-cmEWE9GWUwKE2WA/bfYsnxzBDcM.jpg?size=2560x1810&quality=96&sign=2a12564e16d35494ca93e87db4419e95&type=album',
+            img: 'https://i.ibb.co/Gkxs33V/2568-9.jpg',
         },
         {
             name: 'Современное производство',
-            img: 'https://sun9-5.userapi.com/impg/PCCEKbaVGkOzQ8U7e6P8ZxboRSLwcV6FXrUwYA/E0ZRO1f4Mig.jpg?size=2560x1810&quality=96&sign=eaeab0e6e3af0990504612acd86d523c&type=album',
+            img: 'https://i.ibb.co/9wKGZkv/2371-1.jpg',
         },
         {
             name: 'Вековые традиции и ценности',
-            img: 'https://sun9-68.userapi.com/impg/-cZ3QEvirVRVPVf-h8JTgvL2oEBUv2cFxuNObQ/OzwM9ErglGQ.jpg?size=1772x1033&quality=96&sign=129a1aa9c459877df0dd62ca2bc9f2bc&type=album',
+            img: 'https://i.ibb.co/hC77Ncq/DSC-0295-MOV-20210115-110013-040.jpg',
         },
     ]
 }

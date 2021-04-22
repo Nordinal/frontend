@@ -18,11 +18,11 @@ const IndexPage = () => {
             <Section1Container />
             <Section2Container />
             <Section3Container />
-            <Section4Container />
-            <Section5Container />
-            <Section6Container />
             <Section7Container />
             <Section8Container />
+            <Section6Container />
+            <Section4Container />
+            <Section5Container />
             <Section9Container />
             <Section10Container />
             <Section11Container />

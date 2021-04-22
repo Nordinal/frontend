@@ -1,6 +1,15 @@
 .last{
     margin-right: 15px;
     margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.last:hover{
+    background: var(--main-btn-green);
+    opacity: .7;
 }
 
 .last{
@@ -10,4 +19,49 @@
     background: var(--main-btn-blue);
     padding: 5px 25px;
     border-radius: 25px;
+}
+.like{
+    margin-left: 10px;
+    width: 18px;
+    height: 18px;
+    opacity: .5;
+}
+
+.active:hover{
+    opacity: 1;
+}
+
+.active{
+    animation-name: --anim--click;
+    animation-duration: .4s;
+    background: var(--main-btn-green);
+}
+
+@keyframes --anim--click{
+    0%{
+        box-shadow: 0 0 0 0 rgba(0,0,0,.1);
+    }
+    25%{
+        box-shadow: 0 0 0 6px rgba(0,0,0,.1);
+    }
+    100%{
+        box-shadow: 0 0 0 12px rgba(0,0,0,.01);
+    }
+}
+
+.activeLike{
+    animation-name: --anim--click-like;
+    animation-duration: .4s;
+}
+
+@keyframes --anim--click-like{
+    0%{
+        transform: rotate(-30deg);
+    }
+    25%{
+        transform: rotate(30deg);
+    }
+    100%{
+        transform: rotate(0);
+    }
 }
