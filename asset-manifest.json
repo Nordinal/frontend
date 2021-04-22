@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "/frontend/static/css/main.1cfa1da6.chunk.css",
-    "main.js": "/frontend/static/js/main.bcfbd3bd.chunk.js",
-    "main.js.map": "/frontend/static/js/main.bcfbd3bd.chunk.js.map",
+    "main.css": "/frontend/static/css/main.e695280e.chunk.css",
+    "main.js": "/frontend/static/js/main.ee39b811.chunk.js",
+    "main.js.map": "/frontend/static/js/main.ee39b811.chunk.js.map",
     "runtime-main.js": "/frontend/static/js/runtime-main.5f5f779a.js",
     "runtime-main.js.map": "/frontend/static/js/runtime-main.5f5f779a.js.map",
     "static/css/2.18db1b1c.chunk.css": "/frontend/static/css/2.18db1b1c.chunk.css",
-    "static/js/2.853a9128.chunk.js": "/frontend/static/js/2.853a9128.chunk.js",
-    "static/js/2.853a9128.chunk.js.map": "/frontend/static/js/2.853a9128.chunk.js.map",
+    "static/js/2.4d6bf4fa.chunk.js": "/frontend/static/js/2.4d6bf4fa.chunk.js",
+    "static/js/2.4d6bf4fa.chunk.js.map": "/frontend/static/js/2.4d6bf4fa.chunk.js.map",
     "static/js/3.c18a5958.chunk.js": "/frontend/static/js/3.c18a5958.chunk.js",
     "static/js/3.c18a5958.chunk.js.map": "/frontend/static/js/3.c18a5958.chunk.js.map",
     "index.html": "/frontend/index.html",
     "static/css/2.18db1b1c.chunk.css.map": "/frontend/static/css/2.18db1b1c.chunk.css.map",
-    "static/css/main.1cfa1da6.chunk.css.map": "/frontend/static/css/main.1cfa1da6.chunk.css.map",
-    "static/js/2.853a9128.chunk.js.LICENSE.txt": "/frontend/static/js/2.853a9128.chunk.js.LICENSE.txt",
+    "static/css/main.e695280e.chunk.css.map": "/frontend/static/css/main.e695280e.chunk.css.map",
+    "static/js/2.4d6bf4fa.chunk.js.LICENSE.txt": "/frontend/static/js/2.4d6bf4fa.chunk.js.LICENSE.txt",
     "static/media/11.17101774.png": "/frontend/static/media/11.17101774.png",
     "static/media/11.2a16cd51.mp4": "/frontend/static/media/11.2a16cd51.mp4",
     "static/media/index.css": "/frontend/static/media/MyriadPro-Regular.498d9244.ttf",
+    "static/media/arrowSection5.4dc738eb.svg": "/frontend/static/media/arrowSection5.4dc738eb.svg",
     "static/media/exit.1f4737b0.svg": "/frontend/static/media/exit.1f4737b0.svg",
     "static/media/facebook.3ef94af7.svg": "/frontend/static/media/facebook.3ef94af7.svg",
     "static/media/geo.c73a55d0.svg": "/frontend/static/media/geo.c73a55d0.svg",
@@ -40,8 +41,8 @@
   "entrypoints": [
     "static/js/runtime-main.5f5f779a.js",
     "static/css/2.18db1b1c.chunk.css",
-    "static/js/2.853a9128.chunk.js",
-    "static/css/main.1cfa1da6.chunk.css",
-    "static/js/main.bcfbd3bd.chunk.js"
+    "static/js/2.4d6bf4fa.chunk.js",
+    "static/css/main.e695280e.chunk.css",
+    "static/js/main.ee39b811.chunk.js"
   ]
 }
