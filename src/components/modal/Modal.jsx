@@ -5,6 +5,9 @@ import Parse from 'html-react-parser'
 
 
 const Modal = ({active, setActive, children}) => {
+    if(active){
+        document.body.style.overflow = "hidden";
+    }
     return (
         <div className={active ? s.container + ' ' + s.active : s.container} onClick={setActive}>
             <div className={s.title} onClick={(e) => e.stopPropagation()}>{children.titleModal}<img src={exit} onClick={(e) => {

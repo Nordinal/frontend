@@ -55,3 +55,19 @@
 .directionDiv{
     display: flex;
 }
+
+.desc{
+    position: relative;
+    font-family: mRegular;
+    font-size: 16px;
+    opacity: .9;
+}
+.descBottom{
+    margin-bottom: 30px;
+}
+.arrow{
+    position: absolute;
+    top: 10px;
+    left: -45px;
+    opacity: .9;
+}
