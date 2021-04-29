@@ -1,7 +1,7 @@
 .mainText{
     font-family: mRegular;
     font-size: 18px;
-    margin-top: 25px;
+    margin-top: 45px;
 }
 
 .tags {
@@ -24,4 +24,10 @@
     max-width: 1170px;
     width: 100%;
     margin: 0 auto;
+}
+
+.desc{
+    font-family: mRegular;
+    font-size: 16px;
+    margin: 0 0 10px 0;
 }

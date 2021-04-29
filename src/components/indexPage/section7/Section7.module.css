@@ -1,7 +1,7 @@
 .container{
     max-width: 1170px;
     width: 100%;
-    margin: 90px auto 0 auto;
+    margin: 60px auto 0 auto;
 }
 
 .vector{
@@ -12,4 +12,14 @@
 .title{
     font-family: mBlack;
     font-size: 24px;
+}
+
+.items{
+    display: flex;
+    flex-wrap: wrap;
+}
+.desc{
+    font-family: mRegular;
+    font-size: 18px;
+    margin: 0 0 20px 0;
 }

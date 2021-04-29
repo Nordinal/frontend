@@ -49,7 +49,7 @@
 .betweenText{
     margin-left: 15px;
     font-family: mRegular;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .directionDiv{
@@ -59,11 +59,20 @@
 .desc{
     position: relative;
     font-family: mRegular;
-    font-size: 16px;
+    font-size: 20px;
     opacity: .9;
+}
+.desc a{
+    color: black;
+}
+.desc a:hover{
+    color: rgb(92, 92, 92);
 }
 .descBottom{
     margin-bottom: 30px;
+}
+.descTop{
+    margin-top: 30px;
 }
 .arrow{
     position: absolute;

@@ -19,6 +19,7 @@ const Section8 = (props) => {
     return (
       <div className={s.container} id="section8">
         <h2 className={s.title}>Наша продукция<img src={vector} className={s.vector}/></h2>
+        <p className={s.desc}>Cерийное производство ряда новых образцов</p>
         <Slider {...settings}>
             {items}
         </Slider>

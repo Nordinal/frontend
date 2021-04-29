@@ -20,7 +20,7 @@ const Section5 = (props) => {
         <div className={s.container} id="section5">
             <div>
                 <h3 className={s.title}>Начни обучение по целевому направлению<img src={vector} className={s.vector}/></h3>
-                <p className={s.desc}>1. Выбери институт в котором хочешь обучаться<img src={arrow} className={s.arrow}/></p>
+                <p className={s.desc}>1. Выбери институт в котором хочешь обучаться</p>
             </div>
             <div className={s.instituteDiv}>
                 {props.reducer.institute.map( (item, index) => <Institute updateActive={() => props.updateActive(index)} img={item.img} text={item.textBtn} isActive={active == index ? true : false} key={index} setIsActive={() => setIsActiveModal(institute.map((e, i) => i == index ? true : false))}>{item.textBtn}</Institute>)}
@@ -31,10 +31,11 @@ const Section5 = (props) => {
                 <div className={s.circle + ' ' + s.circleRed}></div>
                 <div className={s.betweenText}>Целевые направления {props.reducer.institute[active].textBtn}</div>
             </div>
-            <p className={s.desc + " " + s.descBottom}>2. Выбери направление института<img src={arrow} className={s.arrow}/></p>
+            <p className={s.desc + " " + s.descBottom}>2. Посмотри направления института</p>
             <div className={s.directionDiv}>
                 {direction.map( (item, index) => <Direction setIsActive={() => setIsActive(direction.map((e, i) => i == index ? true : false))} number={item.number} text={item.textBtn} key={index}>{item.textBtn}</Direction>)}
             </div>
+            <p className={s.desc + " " + s.descTop}>3. <a href="#section10">Оставь заявку</a></p>
 
 
 

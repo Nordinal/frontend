@@ -15,6 +15,7 @@ const Section2 = (props) => {
     return (
         <div className={s.container} id="section2">
             <h3 className={s.mainText}>Напишите свой тег о ЗИД</h3>
+            <p className={s.desc}>Добавь одно слово, с которым у тебя ассоциируется ЗИД</p>
             <div className={s.tags}>
                 {props.reducer.tag.map((item, index) => <Tag reducer={item} key={index}/>)}
                 {props.reducer.tagPerson.map((item, index) => <Tag reducer={item} key={index}/>)}

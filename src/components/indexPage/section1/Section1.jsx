@@ -1,5 +1,5 @@
 import Header from "./header/Header"
-import s from './Section1.module.scss'
+import s from './Section1.module.css'
 import i11 from '../../../img/11.png'
 import geo from '../../../img/geo.svg'
 import v11 from '../../../video/11.mp4'
@@ -16,8 +16,8 @@ const Section1 = () => {
                 <Header />
                 <div className={s.main}>
                     <div className={s.leftContent}>
-                        <h1 className={s.mainText}>Целевое обучение</h1>
-                        <p className={s.descText}>ЗИД предоставляет возможность построения профессиональной карьеры по выбранному направлению подготовки или специальности вуза</p>
+                        <h1 className={s.mainText}>Целевое обучение от ЗИД</h1>
+                        <p className={s.descText}>ЗИД предоставляет возможность построения профессиональной карьеры по выбранной специальности вуза</p>
                         <div className={s.btnDiv}>
                         <a href='#section3' className={s.btn}>Узнать подробнее</a>
                         </div>

@@ -1,11 +1,12 @@
 .container{
     position: relative;
-    width: 1170px;
     overflow: hidden;
     border-radius: 5px;
-    margin-top: 30px;
-
-    transition: all .2s linear;
+    transition: box-shadow .2s linear;
+    width: 270px;
+    height: 115px;
+    cursor: pointer;
+    margin: 0 15px 15px 0;
 }
 
 .container:hover{
@@ -26,26 +27,28 @@
     background: #000;
     width: 100%;
     height: 100%;
-    opacity: .7;
+    opacity: .5;
     z-index: -1;
 }
 
 .title{
     font-family: mBlack;
-    font-size: 36px;
+    font-size: 16px;
     color: white;
     margin: 30px 15px;
-    width: 655px;
+    text-align: center;
+    max-width: 555px;
 }
+
 
 .content{
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .btn{
-    margin-right: 15px;
+    margin: 30px 15px;
     border-radius: 100px;
     font-family: mBlack;
     font-size: 18px;
@@ -54,9 +57,51 @@
     padding: 12px 34px;
     background: var(--main-btn-orange);
     cursor: pointer;
-
-    transition: all .2s linear;
+    align-self: flex-start;
 }
-.btn:hover{
-    box-shadow: 0 0 20px rgba(245,182,122,.5);
+.disable{
+    display: none;
+}
+
+.active{
+    order: -1;
+    width: 1170px;
+    height: 400px;
+    animation-name: anim;
+    animation-duration: 1.5s;
+}
+@keyframes anim{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.titleActive {
+    font-size: 36px;
+    text-align: start;
+}
+
+.contentActive{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.swipe{
+    font-family: mRegular;
+    position: absolute;
+    padding: 15px 30px;
+    top: 0;
+    left: 0;
+    color: white;
+    font-size: 18px;
+    width: 100%;
+    height: 100%;
+    background: #3f3f3f;
+    animation-name: anim;
+    animation-duration: 0.4s;
 }
