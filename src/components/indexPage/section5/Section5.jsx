@@ -1,10 +1,10 @@
 import Modal from '../../modal/Modal'
 import s from './Section5.module.css'
 import vector from '../../../img/vector.svg'
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import Institute from './institute/Institute'
 import Direction from './direction/Direction'
-import arrow from '../../../img/arrowSection5.svg'
+import * as axios from 'axios'
 
 
 const Section5 = (props) => {
@@ -14,7 +14,6 @@ const Section5 = (props) => {
     const [isActive, setIsActive] = useState(direction.map( () => false));
 
     const institute = props.reducer.institute;
-    console.log(institute[0].instituteModal);
     const [isActiveModal, setIsActiveModal] = useState(institute.map( () => false));
     return (
         <div className={s.container} id="section5">

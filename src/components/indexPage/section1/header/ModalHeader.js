@@ -1,12 +1,28 @@
 import s from './ModalHeader.module.css'
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import InputMask from 'react-input-mask';
+import * as axios from "axios"
 
 
-const ModalHeader = ({isActiveModal, setIsActiveModal}) => {
+const ModalHeader = (props) => {
     const [auth, setAuth] = useState(true);
+    useEffect(function(){
+        console.log(props.reducer.isLoggin)
+    })
+
+    const handleClick = () => {
+        axios.post("http://localhost:5000/api/user", props.reducer).then((res) => {
+                if(res.data == true){
+                    props.submit();
+                }
+                else{
+                    props.submitFalse();
+                }
+            })
+    }
+
     return(
-        <div className={isActiveModal ? s.container + ' ' + s.active : s.container} onClick={setIsActiveModal}>
+        <div className={props.isActiveModal ? s.container + ' ' + s.active : s.container} onClick={props.setIsActiveModal}>
             <div onClick={(e) => e.stopPropagation()} className={s.all}>
                 <div className={s.btns}>
                     <button onClick={() => setAuth(true)} className={auth ? s.login + ' ' + s.logActive : s.login}>Войти</button>
@@ -15,10 +31,10 @@ const ModalHeader = ({isActiveModal, setIsActiveModal}) => {
                 <div>
                     <div className={auth ? s.content : s.disable}>
                         <div className={s.content__inner}>
-                            <input className={s.input} placeholder="Почта"/>
-                            <input className={s.input} placeholder="Пароль"/>
+                            <input className={s.input} placeholder="Почта" value={props.reducer.email} onChange={props.changeValueEmail}/>
+                            <input className={s.input} placeholder="Пароль" value={props.reducer.password} onChange={props.changeValuePassword}/>
                             <label className={s.label}><input type="checkbox" /><p>Запомнить аккаунт</p></label>
-                            <button onClick={() => alert('Сервер не отвечает')}>Войти</button>
+                            <button onClick={handleClick}>Войти</button>
                         </div>
                     </div>
                     <div className={!auth ? s.content : s.disable}>

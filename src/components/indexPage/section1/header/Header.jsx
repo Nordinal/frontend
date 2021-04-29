@@ -2,14 +2,17 @@ import s from './Header.module.css'
 import logo from '../../../../img/logo.svg'
 import profile from '../../../../img/profile.svg'
 import { NavLink } from 'react-router-dom'
-import ModalHeader from './ModalHeader'
 import {useState} from 'react'
+import ModalHeaderContainer from './ModalHeaderContainer'
 
 
 const Header = () => {
 
     const [isActiveModal,setisActiveModal] = useState(false);
 
+    const handleClick = () =>{
+        
+    }
     return (
         <div className={s.main}>
             <a href=''><img src={logo} alt='логотип' className={s.logo}/></a>
@@ -23,7 +26,7 @@ const Header = () => {
             </nav>
             <button className={s.btn} onClick={() => setisActiveModal(true)}><img src={profile} alt='профиль' className={s.profile} className={s.loggin} /></button>
 
-            <ModalHeader isActiveModal={isActiveModal} setIsActiveModal={() => setisActiveModal(false)}/>
+            <ModalHeaderContainer isActiveModal={isActiveModal} setIsActiveModal={() => setisActiveModal(false)}/>
         </div>
     );
 }

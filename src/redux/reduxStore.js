@@ -6,6 +6,7 @@ import reducerSection6 from './reducer/reducerSection6';
 import reducerSection7 from './reducer/reducerSection7';
 import reducerSection8 from './reducer/reducerSection8';
 import reducerSection9 from './reducer/reducerSection9';
+import reducerAuth from './reducer/reducerAuth';
 
 let reducers = combineReducers({
     reducerSection2: reducerSection2,
@@ -15,6 +16,7 @@ let reducers = combineReducers({
     reducerSection7: reducerSection7,
     reducerSection8: reducerSection8,
     reducerSection9: reducerSection9,
+    reducerAuth: reducerAuth,
 });
 
 let store = createStore(reducers);
