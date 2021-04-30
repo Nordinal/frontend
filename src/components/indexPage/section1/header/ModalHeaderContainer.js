@@ -17,8 +17,8 @@ const mdtp = (dispatch) => {
         changeValuePassword: (e) => {
             dispatch(checkAuthPassword(e.target.value))
         },
-        submit: () => {
-            dispatch(submit())
+        submit: (email, password, tel) => {
+            dispatch(submit(email, password, tel))
         },
         submitFalse: () => {
             dispatch(submitFalse())

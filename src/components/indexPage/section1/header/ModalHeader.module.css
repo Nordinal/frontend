@@ -118,3 +118,16 @@
 .logActive{
     background: #F2F2F2;
 }
+
+.err{
+    text-align: center;
+    transform: translateY(5px);
+    color: tomato;
+    font-family: mRegular;
+    opacity: 0;
+    transition: opacity .5s ease-in;
+}
+
+.activeErr{
+    opacity: 1;
+}

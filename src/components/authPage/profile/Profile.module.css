@@ -1,0 +1,58 @@
+.container{
+    background: white;
+    width: 900px;
+    border-radius: 10px;
+    border: 1px solid #E0E0E0;
+}
+
+.input{
+    background-color: #F2F2F2;
+    padding: 10px 20px;
+    border: 1px solid #E0E0E0;
+    position: relative;
+    border-radius: 100px;
+    outline: none;
+    font-family: mRegular;
+    font-size: 18px;
+    width: 300px;
+}
+.num{
+    margin: 30px;
+    position: relative;
+}
+.num::before{
+    content: "Пароль";
+    position: absolute;
+    top: -20px;
+    left: 15px;
+    font-family: mRegular;
+    font-size: 14x;
+}
+.tel{
+    margin: 30px;
+    position: relative;
+}
+.tel::before{
+    content: "Телефон";
+    position: absolute;
+    top: -20px;
+    left: 15px;
+    font-family: mRegular;
+    font-size: 14x;
+}
+
+.btn{
+    background: #005485;
+    border: none;
+    border-radius: 8px;
+    padding: 5px 20px;
+    color: white;
+    font-family: mRegular;
+    font-size: 16px;
+    margin: 0  0 30px 30px;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background: #024369;
+}

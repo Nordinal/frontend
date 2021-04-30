@@ -2,21 +2,26 @@ import s from './ModalHeader.module.css'
 import {useState, useEffect} from 'react'
 import InputMask from 'react-input-mask';
 import * as axios from "axios"
+import { useHistory } from 'react-router';
 
 
 const ModalHeader = (props) => {
     const [auth, setAuth] = useState(true);
-    useEffect(function(){
-        console.log(props.reducer.isLoggin)
-    })
+    const [activeErr, setActiveErr] = useState(false);
+    let history = useHistory();
 
     const handleClick = () => {
         axios.post("http://localhost:5000/api/user", props.reducer).then((res) => {
-                if(res.data == true){
-                    props.submit();
+                if(res.data == false){
+                    setActiveErr(true);
+                    props.submitFalse();
                 }
                 else{
-                    props.submitFalse();
+                    setActiveErr(false);
+                    let {email, password, tel} = res.data;
+                    console.log(email, password, tel)
+                    props.submit(email, password, tel);
+                    history.push("/auth/profile");
                 }
             })
     }
@@ -31,6 +36,7 @@ const ModalHeader = (props) => {
                 <div>
                     <div className={auth ? s.content : s.disable}>
                         <div className={s.content__inner}>
+                            <p className={activeErr? s.err + " " + s.activeErr : s.err}>Неверная почта или пароль</p>
                             <input className={s.input} placeholder="Почта" value={props.reducer.email} onChange={props.changeValueEmail}/>
                             <input className={s.input} placeholder="Пароль" value={props.reducer.password} onChange={props.changeValuePassword}/>
                             <label className={s.label}><input type="checkbox" /><p>Запомнить аккаунт</p></label>

@@ -1,8 +1,8 @@
-import Header from "./header/Header"
 import s from './Section1.module.css'
 import i11 from '../../../img/11.png'
 import geo from '../../../img/geo.svg'
 import v11 from '../../../video/11.mp4'
+import HeaderContainer from "./header/HeaderContainer"
 
 
 const Section1 = () => {
@@ -13,7 +13,7 @@ const Section1 = () => {
                 <video autoplay="autoplay" muted="muted" loop="loop" id="myVideo" className={s.video}>
                     <source src={v11} type= "video/mp4"/>
                 </video>
-                <Header />
+                <HeaderContainer />
                 <div className={s.main}>
                     <div className={s.leftContent}>
                         <h1 className={s.mainText}>Целевое обучение от ЗИД</h1>

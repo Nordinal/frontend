@@ -1,0 +1,98 @@
+.container{
+    background-color: #F2F2F2;
+    height: 100vh;
+}
+
+.header {
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+    background: white;
+    border: 1px solid #E0E0E0;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 140px;
+    overflow: hidden;
+}
+
+.header__rigth{
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    padding: 135px 35px;
+    margin: 0 70px;
+    position: relative;
+    background: #005485;
+    cursor: pointer;
+}
+.logo:hover{
+    background: #024369;
+}
+
+.data__title{
+    font-family: mRegular;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.data__email{
+    font-family: mBlack;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+.data__number{
+    font-family: mRegular;
+    font-size: 18px;
+}
+.btnExit{
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    outline: none;
+    margin-right: 15px;
+}
+
+.btnExit img{
+    border-radius: 5px;
+}
+
+.btnExit img:hover{
+    box-shadow: 0 0 10px 5px rgba(255, 99, 71,.2);
+}
+
+.main{
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    margin-top: 40px;
+}
+.nav{
+    display: flex;
+    flex-direction: column;
+    width: 270px;
+}
+.nav__link{
+    text-decoration: none;
+    color: black;
+    border-radius: 10px;
+    padding: 15px 10px;
+    width: 80%;
+    font-family: mRegular;
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.nav__link:hover{
+    background-color: #DEDEDE;
+}
+
+.active{
+    background-color: #DEDEDE;
+}

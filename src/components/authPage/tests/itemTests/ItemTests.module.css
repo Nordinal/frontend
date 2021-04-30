@@ -1,0 +1,40 @@
+.progress{
+    border-bottom: 15px solid #F2F2F2;
+    border-radius: 100px;
+    width: 100px;
+    height: 15px;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #E0E0E0;
+    border-bottom: 1px solid #E0E0E0;
+    padding: 20px 15px;
+    cursor: pointer;
+}
+
+.container:first-child{
+    border: none;
+}
+.container:last-child{
+    border: none;
+}
+.container__rigth{
+    display: flex;
+    align-items: center;
+}
+
+.container__rigth p {
+    font-family: mRegular;
+    font-size: 18px;
+}
+.que{
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+.container:hover{
+    background-color: #e6e6e6;
+}
