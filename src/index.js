@@ -8,7 +8,9 @@ import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from 'react-router-dom';
 import {Provider} from 'react-redux'
 import anchors from './components/scripts/anchors';
+import init from './components/scripts/init';
 anchors();
+init();
 
 ReactDOM.render(
   <React.StrictMode>

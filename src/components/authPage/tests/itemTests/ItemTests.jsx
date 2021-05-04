@@ -1,13 +1,17 @@
 import s from "./ItemTests.module.css"
 import question from '../../../../img/question.svg'
+import TestingFirst from "./TestingFirst/TestingFirst"
 
 const ItemTest = (props) => {
+    let handle = () => {
+        props.toggleIsBegin(props.index);
+    }
     return(
-        <div className={s.container}>
+        <div className={s.container} onClick={handle}>
             <div className={s.container__rigth}>
-                <p>{props.name}</p>
+                <p>{props.reducer.name}</p>
                 <p><img src={question} className={s.que}/></p>
-                <p>{props.questions}</p>
+                <p>{props.reducer.questions}</p>
             </div>
             <div className={s.progress}></div>
         </div>

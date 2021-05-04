@@ -8,9 +8,6 @@ import { useEffect, useState } from "react"
 
 const AuthPage = (props) => {
     let history = useHistory();
-    if(props.auth.isLoggin === false){
-        history.push("/");
-    }
     const handleClick = () => {
         history.push("/")
         props.submitFalse();

@@ -11,9 +11,6 @@ const Header = (props) => {
 
     const [isActiveModal,setisActiveModal] = useState(false);
     let history = useHistory();
-    useEffect(() => {
-        props.init();
-    },[])
     const handleClick = () =>{
         if(props.auth.isLoggin == true){
             history.push("/auth/profile")

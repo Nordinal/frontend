@@ -11,9 +11,7 @@ const mstp = (state) => {
 
 const mdtp = (dispatch) => {
     return {
-        init: () =>{
-            dispatch(init());
-        }
+
     };
 }
 
