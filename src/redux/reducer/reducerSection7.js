@@ -18,6 +18,10 @@ const initialState = {
             name: 'Вековые традиции и ценности',
             img: 'https://i.ibb.co/hC77Ncq/DSC-0295-MOV-20210115-110013-040.jpg',
         },
+        {
+            name: 'Высококвалифицированные кадры',
+            img: 'https://i.ibb.co/DKkDj7T/DSC-0273-MOV-20210115-113750-987.jpg',
+        },
     ]
 }
 

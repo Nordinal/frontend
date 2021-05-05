@@ -68,7 +68,8 @@
     width: 1170px;
     height: 400px;
     animation-name: anim;
-    animation-duration: 1.5s;
+    animation-timing-function: ease-in;
+    animation-duration: 1s;
 }
 @keyframes anim{
     0%{
@@ -91,7 +92,7 @@
     height: 100%;
 }
 
-.swipe{
+.change{
     font-family: mRegular;
     position: absolute;
     padding: 15px 30px;
@@ -101,7 +102,11 @@
     font-size: 18px;
     width: 100%;
     height: 100%;
-    background: #3f3f3f;
-    animation-name: anim;
-    animation-duration: 0.4s;
+    background: #2f3136;
+    opacity: 0;
+    transition: opacity .4s ease-in;
+}
+
+.swipe{
+    opacity: 1;
 }

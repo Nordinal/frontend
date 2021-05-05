@@ -20,6 +20,10 @@
     cursor: pointer;
 }
 
+.top div:hover{
+    background-color: #09496e;
+}
+
 .title{
     background-color: #FCFCFC;
     padding: 25px 30px;

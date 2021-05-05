@@ -6,7 +6,6 @@ import Section4Container from "./section4/Section4Container"
 import Section5Container from "./section5/Section5Container"
 import Section6Container from "./section6/Section6Container"
 import Section7Container from "./section7/Section7Container"
-import Section8Container from "./section8/Section8Container"
 import Section9Container from "./section9/Section9Container"
 import Section10Container from "./section10/Section10Container"
 import Section11Container from "./section11/Section11Container"
@@ -19,7 +18,6 @@ const IndexPage = () => {
             <Section2Container />
             <Section3Container />
             <Section7Container />
-            <Section8Container />
             <Section6Container />
             <Section4Container />
             <Section5Container />

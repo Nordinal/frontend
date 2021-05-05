@@ -17,6 +17,7 @@
 .items{
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 .desc{
     font-family: mRegular;
