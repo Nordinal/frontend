@@ -25,6 +25,12 @@ const TestingFirst = (props) => {
         return handleClick(bool)
     }
     const handleClick = (bool) => {
+        document.querySelectorAll('.' + s.title).forEach(item => {
+            item.classList.remove(s.anim); 
+            setTimeout(() => {
+                item.classList.add(s.anim)
+            },0)
+        })
         if(count < props.tests.questionsList.length - 1){
             props.updateResponse(bool, count, props.currentItem);
             setCount(++count);
@@ -32,10 +38,18 @@ const TestingFirst = (props) => {
             props.updateResponse(bool, count, props.currentItem);
             setCount(++count);
             let max = Math.max(...props.tests.result);
-            console.log(props.tests.result)
-            for(let i = 0; i <= props.tests.result.length; i++){
-                if(props.tests.result[i] === max){
-                    setResult(props.tests.responseList[i]);
+            console.log(max)
+            if(max == 0){
+                setResult({
+                    title: "Вы ни разу не нажали кнопку да :(",
+                    desc: "Пожалуйста, пройдите тест еще раз."
+                })
+            }
+            else{
+                for(let i = 0; i <= props.tests.result.length; i++){
+                    if(props.tests.result[i] === max){
+                        setResult(props.tests.responseList[i]);
+                    }
                 }
             }
             setThatAll(true)

@@ -28,6 +28,17 @@
     font-family: mRegular;
     font-size: 18px;
 }
+.anim{
+    animation: anim-title 1s;
+}
+@keyframes anim-title {
+    0%{
+        background-color: #d8d8d8;
+    }
+    100%{
+        background-color: #FCFCFC;
+    }
+}
 .body{
     display: flex;
     flex-direction: column;
