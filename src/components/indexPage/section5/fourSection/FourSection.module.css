@@ -1,0 +1,128 @@
+.bg{
+    background-image: url(../../../../img/bgSection5.png);
+    height: 100%;
+}
+
+.container1{
+    max-width: 1170px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.info{
+    align-self: center;
+    margin: 30px 0 60px 0;
+}
+
+
+.bottom{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 1170px;
+    bottom: 60px;
+}
+
+.btn{
+    border: 5px solid #4AE396;
+    border-radius: 25px;
+    font-family: mBlack;
+    font-size: 18px;
+    padding: 10px 50px;
+    background: rgba(74, 227, 150,0);
+    cursor: pointer;
+    transition: background .2s ease-in;
+}
+.btn:hover{
+    background: rgba(74, 227, 150,1);
+}
+
+.btnBack{
+    background: rgba(237, 105, 129, 0);
+    border: 5px solid #ED6981;
+    padding: 0 12px;
+    border-radius: 25px;
+    margin-right: 15px;
+    cursor: pointer;
+
+    transition: background .2s ease-in;
+}
+
+.btnBack:hover{
+    background: rgba(237, 105, 129, 1);
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.elem{
+    width: 370px;
+    background-color: white;
+    border: 3px solid rgb(77, 85, 244);
+    padding: 12px 15px;
+    border-radius: 10px;
+
+    font-family: mRegular;
+    font-size: 18px;
+}
+
+.container input, textarea:not(:first-child){
+    margin-top: 15px;
+}
+
+.container input, textarea:focus{
+    outline: none;
+}
+
+.container textarea{
+    height: 291px;
+}
+
+.title{
+    font-family: mBlack;
+    font-size: 18px;
+}
+.items{
+    display: flex;
+    justify-content: space-around;
+}
+.cont{
+    display: flex;
+    flex-direction: column;
+}
+.image{
+    height: 64px;
+}
+
+.leftContent{
+    background: white;
+    border: 5px solid #4AE396;
+    border-radius: 10px;
+    height: 425px;
+    width: 370px;
+    margin-top: 15px;
+}
+
+.leftContent__item{
+    box-shadow: 0px 4px 10px rgba(121, 121, 121, 0.3);
+    border-radius: 10px;
+    margin: 15px 15px;
+    display: flex;
+    align-items: center;
+    font-family: mRegular;
+    font-size: 18px;
+    padding: 12px 10px;
+}
+
+.widthImg{
+    display: flex;
+    justify-content: center;
+    width: 64px;
+    margin-right: 12px;
+}

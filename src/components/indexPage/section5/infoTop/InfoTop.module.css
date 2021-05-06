@@ -1,0 +1,36 @@
+.container{
+    display: flex;
+    align-items: center;
+}
+
+.circle{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #4AE396;
+    margin: 0 12px;
+}
+
+.turn{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid #4AE396;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-family: mBlack;
+}
+
+.active{
+    background-color: #4AE396;
+}
+
+.passed{
+    border: 5px solid #4AE396;
+}
+
+.dis{
+    border: 5px solid #F2C94C;
+}

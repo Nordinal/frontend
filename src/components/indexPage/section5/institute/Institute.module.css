@@ -1,18 +1,12 @@
 .container{
-    margin-top: 30px;
     width: 270px;
     box-shadow: 0px 4px 30px rgba(131, 158, 252, 0.3);
     border-radius: 5px;
     position: relative;
     cursor: pointer !important;
+    background-color: white;
 
     transition: all .2s linear;
-}
-.container:not(:first-child){
-    margin-left: 30px;
-}
-.container:nth-child(4n+1){
-    margin-left: 0px;
 }
 
 .container:hover {

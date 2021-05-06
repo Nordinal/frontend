@@ -5,48 +5,42 @@ import {useState, useEffect} from 'react'
 import Institute from './institute/Institute'
 import Direction from './direction/Direction'
 import * as axios from 'axios'
+import MainSection from './mainSection/MainSection'
+import SecondSection from './secondSection/SecondSection'
+import ThreeSection from './threeSection/ThreeSection'
+import FourSection from './fourSection/FourSection'
 
 
 const Section5 = (props) => {
     const direction = props.reducer.institute[props.reducer.active].direction;
-    const active = props.reducer.active;
+    const [count, setCount] = useState(1); 
 
-    const [isActive, setIsActive] = useState(direction.map( () => false));
-
-    const institute = props.reducer.institute;
-    const [isActiveModal, setIsActiveModal] = useState(institute.map( () => false));
+    const  setCountFunc = (k) => {
+        setCount(k);
+    }
     return (
         <div className={s.container} id="section5">
-            <div>
-                <h3 className={s.title}>Начни обучение по целевому направлению<img src={vector} className={s.vector}/></h3>
-                <p className={s.desc}>1. Выбери институт в котором хочешь обучаться</p>
-            </div>
-            <div className={s.instituteDiv}>
-                {props.reducer.institute.map( (item, index) => <Institute updateActive={() => props.updateActive(index)} img={item.img} text={item.textBtn} isActive={active == index ? true : false} key={index} setIsActive={() => setIsActiveModal(institute.map((e, i) => i == index ? true : false))}>{item.textBtn}</Institute>)}
-            </div>
-            <div className={s.between}>
-                <div className={s.circle}></div>
-                <div className={s.circle}></div>
-                <div className={s.circle + ' ' + s.circleRed}></div>
-                <div className={s.betweenText}>Целевые направления {props.reducer.institute[active].textBtn}</div>
-            </div>
-            <p className={s.desc + " " + s.descBottom}>2. Посмотри направления института</p>
-            <div className={s.directionDiv}>
-                {direction.map( (item, index) => <Direction setIsActive={() => setIsActive(direction.map((e, i) => i == index ? true : false))} number={item.number} text={item.textBtn} key={index}>{item.textBtn}</Direction>)}
-            </div>
-            <p className={s.desc + " " + s.descTop}>3. <a href="#section10">Оставь заявку</a></p>
+            {
+                count === 1 ? 
+                <MainSection setCount={setCountFunc}/>
+                : count === 2 ? 
+                <SecondSection count={count} {...props} setCount={setCountFunc}/>
+                : count === 3 ? 
+                <ThreeSection count={count} {...props} setCount={setCountFunc} />
+                : count === 4 ?
+                <FourSection count={count} {...props} setCount={setCountFunc} />
+                : false
+            }
 
-
-
+            {/* 
             {direction.map( (item, index) => <Modal active={isActive[index]} setActive={() => {
                 setIsActive(direction.map(() => false));
                 document.body.style.overflow = "visible";
             }} key={index}>{item.modal}</Modal>)}
-
             {institute.map( (item, index) => <Modal active={isActiveModal[index]} setActive={() => {
                 setIsActiveModal(institute.map( () => false))
                 document.body.style.overflow = "visible";
-            }} key={index}>{item.instituteModal}</Modal>)}
+            }} key={index}>{item.instituteModal}</Modal>)} */}
         </div>
     )
 }

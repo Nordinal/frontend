@@ -8,7 +8,7 @@ const Section7 = (props) => {
     let [loop, setLoop] = useState();
     useEffect(() => {
         setLoop(setInterval(function(){
-            setActive(active > 3 ? active = 0 : active++)
+            setActive(active > 4 ? active = 0 : active++)
         }, 5000))
     }, [])
     return (
