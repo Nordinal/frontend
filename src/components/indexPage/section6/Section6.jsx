@@ -10,7 +10,6 @@ import {useState} from 'react'
 
 const Section6 = (props) => {
 
-    const [activeModule, setActiveModule] = useState(props.reducer.content.map(() => false));
     const settings = {
       dots: true,
       infinite: true,
@@ -19,15 +18,13 @@ const Section6 = (props) => {
       slidesToScroll: 1,
       className: 'slick'
     }
-    const items = props.reducer.content.map((item, index) => <div onClick={() => setActiveModule(props.reducer.content.map((e, i) => index == i ? true : false))}><ItemSection6 name={item.name} img={item.img} /></div>);
-    const numbers = props.reducer.content.map((e, i) => i);
+    const items = props.reducer.content.map((item, index) => <ItemSection6 name={item.name} img={item.img} imageModal={item.imageModal}/>);
     return (
       <div className={s.container} id="section6">
         <h2 className={s.title}>Нам требуются<img src={vector} className={s.vector}/></h2>
         <Slider {...settings} className={s.slick}>
             {items}
         </Slider>
-        {props.reducer.content.map((item, index) => <ModalSection6 activeModule={activeModule[index]} name={item.name} setActiveModal={() => setActiveModule(props.reducer.content.map(() => false))} image={props.reducer.content[index].imageModal}/>)}
       </div>
     );
 }

@@ -1,6 +1,8 @@
 import s from './Modal.module.css'
 import exit from '../../img/exit.svg'
 import Parse from 'html-react-parser'
+import { CSSTransition, TransitionGroup } from 'react-transition-group'
+import { useEffect, useState } from 'react'
 
 
 
@@ -9,7 +11,9 @@ const Modal = ({active, setActive, children}) => {
         document.body.style.overflow = "hidden";
     }
     return (
-        <div className={active ? s.container + ' ' + s.active : s.container} onClick={setActive}>
+        <div className={s.container} onClick={() => {
+                setActive(false);
+            }}>
             <div className={s.title} onClick={(e) => e.stopPropagation()}>{children.titleModal}<img src={exit} onClick={(e) => {
                 setActive(false)
             }}/></div>

@@ -4,19 +4,22 @@
     height: 100%;
     margin: 0 auto;
     position: relative;
+    /* overflow: hidden; */
 }
 .bgColor{
     background: var(--main-btn-blue);
     height: 778px;
-    z-index: -2;
+    z-index: -3;
+    overflow: hidden;
 }
 
 .bgImage{
     position: absolute;
     z-index: 0;
     bottom: 0px;
-    right: -320px;
+    right: -150px;
     background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .title{

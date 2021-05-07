@@ -13,7 +13,6 @@ const AuthPage = (props) => {
         props.submitFalse();
     }
     const changeActiveLink = (e) => {
-        let elements = document.querySelectorAll('.' + s.nav__link);
         console.log(e.target)
     }
     return(

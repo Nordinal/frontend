@@ -1,7 +1,6 @@
 import s from './Direction.module.css'
-import ReactDOM from 'react-dom'
-import Modal from '../../../modal/Modal';
 import { useState } from 'react';
+import ModalCreatePortal from '../../../modal/ModalCreatePortal';
 
 const Direction = (props) => {
     let content = s.content;
@@ -24,11 +23,7 @@ const Direction = (props) => {
                 <span className={s.number}>{props.number}</span>
                 <span>{props.text}</span>
             </div>
-            {active ? 
-                    ReactDOM.createPortal(<Modal active={active} setActive={() => {
-                        setActiveFunc(false);
-                        document.body.style.overflow = "visible";
-                    }} key={Math.random(0,1000)}>{props.modal}</Modal>, document.getElementById('root')) : false}
+            <ModalCreatePortal inner={props.modal} active={active} setActive={() => setActiveFunc(false)}/>
         </div>
     )
 };

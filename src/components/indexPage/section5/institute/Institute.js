@@ -1,8 +1,7 @@
 import s from './Institute.module.css'
 import institute from '../../../../img/institute.svg'
-import ReactDOM from 'react-dom'
-import Modal from '../../../modal/Modal';
 import { useState } from 'react';
+import ModalCreatePortal from '../../../modal/ModalCreatePortal'
 
 
 const Institute = (props) => {
@@ -22,11 +21,7 @@ const Institute = (props) => {
             <div className={props.isActive ? s.titleDiv + ' ' + s.active : s.titleDiv}>
                 <span>{props.text}</span>
             </div>
-            {active ? 
-                    ReactDOM.createPortal(<Modal active={active} setActive={() => {
-                        setActiveFunc(false);
-                        document.body.style.overflow = "visible";
-                    }} key={Math.random(0,1000)}>{props.instituteModal}</Modal>, document.getElementById('root')) : false}
+            <ModalCreatePortal inner={props.instituteModal} active={active} setActive={() => setActiveFunc(false)}/>
         </div>
     )
 }

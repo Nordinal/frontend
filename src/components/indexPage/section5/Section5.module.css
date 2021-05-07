@@ -1,4 +1,19 @@
 .container{
     margin-top: 90px;
+    background-image: url(../../../img/bgSection5.png);
+}
+
+.content{
     height: 778px;
+}
+.contentExit{
+    transform: translateX(-100vw);
+}
+.contentEnter{
+    transition: transform 500ms;
+}
+
+.contentEnterActive{
+    transform: translateX(-100vw);
+
 }

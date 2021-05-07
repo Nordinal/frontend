@@ -55,3 +55,16 @@
 
     transition: all .2s linear;
 }
+
+.modal{
+    
+}
+
+.modalEnter{
+    opacity: 0;
+}
+
+.modalEnterActive{
+    opacity: 1;
+    transition: opacity 1000ms;
+}

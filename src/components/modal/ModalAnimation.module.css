@@ -1,0 +1,21 @@
+.modal{
+    
+}
+
+.modalEnter{
+    opacity: 0;
+}
+
+.modalEnterActive{
+    opacity: 1;
+    transition: opacity 500ms;
+}
+
+.modalExit{
+    opacity: 1;
+}
+
+.modalExitActive{
+    opacity: 0;
+    transition: opacity 500ms;
+}

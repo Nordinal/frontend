@@ -38,3 +38,18 @@
     margin: 10px;
     font-size: 18px;
 }
+
+.modalEnter{
+    opacity: 0;
+    transition: opacity 500ms;
+}
+.modalEnterActive{
+    opacity: 1;
+}
+.modalExit{
+    opacity: 1;
+    transition: opacity 500ms;
+}
+.modalExitActive{
+    opacity: 0;
+}
