@@ -129,6 +129,7 @@ const initialState = {
     ],
     active: 0,
     activeTurn: 0,
+    disableSection10: false,
 }
 
 const reducerSection5 = (state = initialState, action = {}) => {
@@ -145,6 +146,12 @@ const reducerSection5 = (state = initialState, action = {}) => {
                 activeTurn: action.index
             }
         }
+        case DISABLE_SECTION10: {
+            return {
+                ...state,
+                disableSection10: true,
+            }
+        }
         default:
             return state;
     }
@@ -152,6 +159,7 @@ const reducerSection5 = (state = initialState, action = {}) => {
 
 const UPDATE_ACTIVE = 'UPDATE_ACTIVE'
 const UPDATE_ACTIVE_TURN = 'UPDATE_ACTIVE_TURN'
+const DISABLE_SECTION10 = "DISABLE_SECTION10"
 
 export const updateActiveCreator = (index) => ({
     type: UPDATE_ACTIVE,
@@ -163,4 +171,7 @@ export const updateTurn = (index) => ({
     index: index
 })
 
+export const disableSection10 = () => ({
+    type: DISABLE_SECTION10,
+})
 export default reducerSection5;

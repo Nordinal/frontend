@@ -32,7 +32,6 @@ const Section11 = () =>{
                         <nav className={s.nav}>
                             <a href='#section3'>О нас</a>
                             <a href='#section7'>Предложения</a>
-                            <a href='#section8'>Продукция</a>
                             <a href='#section4'>Целевое направление</a>
                             <a href='#section5'>Партнеры</a>
                             <a href='#section9'>Тесты</a>

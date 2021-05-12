@@ -16,7 +16,6 @@
     font-family: mRegular;
     cursor: pointer;
 }
-
 .container:hover{
     transform: translateY(-8px);
 }

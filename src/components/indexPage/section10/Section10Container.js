@@ -4,6 +4,7 @@ import Section10 from './Section10'
 
 const mstp = (state) => {
     return {
+        disable: state.reducerSection5.disableSection10
     }
 }
 

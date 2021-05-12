@@ -10,9 +10,6 @@ const Section1 = () => {
     return (
         <section className={s.content}>
             <div className={s.container}>
-                <video autoplay="autoplay" muted="muted" loop="loop" id="myVideo" className={s.video}>
-                    <source src={v11} type= "video/mp4"/>
-                </video>
                 <HeaderContainer />
                 <div className={s.main}>
                     <div className={s.leftContent}>

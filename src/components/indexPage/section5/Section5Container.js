@@ -1,6 +1,6 @@
 import Section5 from './Section5'
 import {connect} from 'react-redux'
-import {updateActiveCreator, updateTurn} from '../../../redux/reducer/reducerSection5'
+import {disableSection10, updateActiveCreator, updateTurn} from '../../../redux/reducer/reducerSection5'
 
 
 const mstp = (state) => {
@@ -16,6 +16,9 @@ const mdtp = (dispatch) => {
         },
         updateTurn: (index) => {
             dispatch(updateTurn(index))
+        },
+        disableSection10: () => {
+            dispatch(disableSection10())
         }
     };
 }

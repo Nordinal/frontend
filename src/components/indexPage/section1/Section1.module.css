@@ -7,8 +7,22 @@
 
 .content{
     overflow: hidden;
+    background-image: url(../../../img/bgSection1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
+    padding-bottom: 30px;
+    position: relative;
 }
 
+.content::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0,.5);
+    z-index: -1;
+}
 .mainText {
     color:white;
     font-family: mBlack;
@@ -42,7 +56,7 @@
     padding: 14px 36px;
     border-radius: 100px;
 
-    transition: all .2s linear;
+    transition: box-shadow .2s linear;
 
 }
 
@@ -58,12 +72,12 @@
     width: 697px;
     height: 474px;
     position: absolute;
-    z-index: -1;
+    z-index: 0;
 }
 
 .main{
     display: flex;
-    
+    margin-bottom: 280px;
 }
 
 .rigthContent {
@@ -83,7 +97,7 @@
     left: 50px;
     top: 364px;
 
-    transition: all .2s linear;
+    transition: color .2s linear, border .2s linear;
 }
 
 .btnEngineer:hover{
@@ -108,7 +122,6 @@
 }
 
 .footer {
-    margin-top: 180px;
     display: flex;
 }
 
@@ -133,15 +146,57 @@
     margin-right: 10px;
 }
 
-.video{
-    position:absolute;
-    z-index: 0;
-    left: 0;
-    height: 730px;
-    width: 100%;
-    object-fit: cover;
-    margin: 0 auto;
 
-    z-index: -1;
-    background: #555;
+@media screen and (max-width: 997px) {
+    .container{
+        padding: 0 30px;
+    }
+    .rigthContent{
+        width: 30%;
+        height: 30%;
+        margin-left: -30px;
+        margin-top: 120px;
+    }
+    .i11{
+        width: 441px;
+        height: 300px;
+    }
+    .imgText{
+        top: 140px;
+        left: 30px;
+        font-size: 28px;
+        width: 200px;
+    }
+    .btnEngineer{
+        top: 210px;
+        left: 30px;
+        font-size: 16px;
+    }
+    .mainText{
+        font-size: 28px;
+    }
+    .descText{
+        width: 370px;
+        font-size: 16px;
+    }
+    .btn{
+        font-size: 16px;
+        padding: 9px 24px;
+    }
+    .zid{
+        font-size: 16px;
+    }
+    .tel{
+        font-size: 16px;
+    }
+    .main{
+        margin-bottom: 120px;
+    }
+}
+
+@media screen and (max-width: 773px) {
+    .rigthContent{
+        margin-left: -220px;
+        margin-top: 160px;
+    }
 }
