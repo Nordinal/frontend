@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/frontend/static/css/main.50ff0565.chunk.css",
+    "main.css": "/frontend/static/css/main.d36b2ae9.chunk.css",
     "main.js": "/frontend/static/js/main.e46956c0.chunk.js",
     "main.js.map": "/frontend/static/js/main.e46956c0.chunk.js.map",
     "runtime-main.js": "/frontend/static/js/runtime-main.fee31810.js",
@@ -12,7 +12,7 @@
     "static/js/3.75037920.chunk.js.map": "/frontend/static/js/3.75037920.chunk.js.map",
     "index.html": "/frontend/index.html",
     "static/css/2.20028b9a.chunk.css.map": "/frontend/static/css/2.20028b9a.chunk.css.map",
-    "static/css/main.50ff0565.chunk.css.map": "/frontend/static/css/main.50ff0565.chunk.css.map",
+    "static/css/main.d36b2ae9.chunk.css.map": "/frontend/static/css/main.d36b2ae9.chunk.css.map",
     "static/js/2.da997698.chunk.js.LICENSE.txt": "/frontend/static/js/2.da997698.chunk.js.LICENSE.txt",
     "static/media/11.2a16cd51.mp4": "/frontend/static/media/11.2a16cd51.mp4",
     "static/media/11.93cdd622.png": "/frontend/static/media/11.93cdd622.png",
@@ -49,7 +49,7 @@
     "static/js/runtime-main.fee31810.js",
     "static/css/2.20028b9a.chunk.css",
     "static/js/2.da997698.chunk.js",
-    "static/css/main.50ff0565.chunk.css",
+    "static/css/main.d36b2ae9.chunk.css",
     "static/js/main.e46956c0.chunk.js"
   ]
 }
