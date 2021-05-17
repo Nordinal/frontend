@@ -1,7 +1,8 @@
 .container{
-    max-width: 1170px;
+    max-width: 1200px;
     width: 100%;
     margin: 90px auto 90px auto;
+    padding: 0 15px;
 }
 
 .container h2{
@@ -16,5 +17,24 @@ h2 img{
 .content {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     margin-top: 30px;
+}
+
+@media screen and (max-width: 1200px) {
+    .container{
+        max-width: 970px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .container{
+        max-width: 750px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .container{
+        max-width: none;
+    }
 }

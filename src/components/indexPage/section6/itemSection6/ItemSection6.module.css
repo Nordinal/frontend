@@ -1,6 +1,5 @@
 .container{
     margin: 20px 10px;
-    width: 270px;
     height: 330px;
     background: linear-gradient(180deg, #F7F7F7 0%, #EAF0F8 100%);
     border-radius: 5px 5px 5px 5px;
@@ -21,8 +20,8 @@
 }
 
 .img{
-    width: 270px;
     height: 200px;
+    width: 100%;
     object-fit: cover;
 }
 

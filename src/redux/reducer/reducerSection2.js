@@ -1,14 +1,11 @@
+import {init} from "../../api/initApi"
+
 const UPDATE_NAME_TEXT = 'UPDATE_NAME_TEXT';
-const CHANGE_TEG_PERSON = 'CHANGE_TEG_PERSON'
+const CHANGE_TEG_PERSON = 'CHANGE_TEG_PERSON';
+const INIT = "INIT"
 
 let initialStore = {
-    tag: [
-        'ЗИД',
-        'Целевое обучение',
-        'Инженеры',
-        'Карьера',
-        'Перспективаня работа'
-    ],
+    tag: [],
     tagPerson: [],
     newTag: ''
 }
@@ -43,6 +40,12 @@ const reducerSection2 = (state = initialStore, action = {}) => {
                 }
             }
         }
+        case INIT: {
+            return{
+                ...state,
+                tag: action.tag
+            }
+        }
         default:
             return state;
     }
@@ -58,5 +61,10 @@ export const updateNewTagCreator = (text) => ({
 export const changeTagPersonCreator = () => ({
     type: CHANGE_TEG_PERSON
 })
+
+export const initTags = () => async (dispatch) => {
+    let res = await init.getTags();
+    dispatch({type: INIT, tag: res})
+}
 
 export default reducerSection2;

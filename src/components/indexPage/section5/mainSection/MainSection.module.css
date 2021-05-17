@@ -1,10 +1,10 @@
 .container{
-    max-width: 1170px;
+    max-width: 1200px;
     width: 100%;
     height: 100%;
     margin: 0 auto;
     position: relative;
-    /* overflow: hidden; */
+    padding: 0 15px;
 }
 .bgColor{
     background: var(--main-btn-blue);
@@ -21,11 +21,16 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+.pather{
+    z-index: 1;
+    position: relative;
+    
+}
 
 .title{
     font-size: 48px;
     color: white;
-    width: 700px;
+    width: 58%;
     font-family: mBlack;
     padding-top: 113px;
 }
@@ -53,4 +58,32 @@
     font-family: mBlack;
     font-size: 24px;
     color: white;
+}
+
+@media screen and (max-width: 1200px) {
+    .container{
+        max-width: 970px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .container{
+        max-width: 750px;
+    }
+    .bgImage{
+        display: none;
+    }
+    .pather{
+        width: 100%;
+    }
+    .title{
+        width: 100%;
+        font-size: 36px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .container{
+        max-width: none;
+    }
 }

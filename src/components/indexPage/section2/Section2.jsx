@@ -1,7 +1,7 @@
 import s from './Section2.module.css'
 import Tag from './tag/Tag';
 import i21 from '../../../img/plus.svg'
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import ModalSection2 from './Modal/Modal';
 
 
@@ -11,6 +11,9 @@ const Section2 = (props) => {
     const getModal = () => {
         setActiveModal(!activeModal);
     }
+    useEffect(()=> {
+        props.initTags();
+    }, [])
 
     return (
         <div className={s.container} id="section2">

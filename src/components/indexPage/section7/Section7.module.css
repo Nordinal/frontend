@@ -1,7 +1,8 @@
 .container{
-    max-width: 1170px;
+    max-width: 1200px;
     width: 100%;
     margin: 60px auto 0 auto;
+    padding: 0 15px;
 }
 
 .vector{
@@ -23,4 +24,21 @@
     font-family: mRegular;
     font-size: 18px;
     margin: 0 0 20px 0;
+}
+@media screen and (max-width: 1200px) {
+    .container{
+        max-width: 970px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .container{
+        max-width: 750px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .container{
+        max-width: none;
+    }
 }

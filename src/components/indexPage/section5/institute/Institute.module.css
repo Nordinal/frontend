@@ -5,6 +5,7 @@
     position: relative;
     cursor: pointer !important;
     background-color: white;
+    margin-top: 30px;
 
     transition: all .2s linear;
 }
@@ -54,10 +55,6 @@
     background: var(--main-btn-orange);
 
     transition: all .2s linear;
-}
-
-.modal{
-    
 }
 
 .modalEnter{

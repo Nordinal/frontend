@@ -3,12 +3,12 @@ textarea{
 }
 
 .bg{
-    height: 660px;
     position: relative;
 }
 
 .container{
-    max-width: 1170px;
+    max-width: 1200px;
+    padding: 30px 15px;
     width: 100%;
     margin: 0 auto 0;
 
@@ -22,13 +22,12 @@ textarea{
     color: white;
     font-family: mBlack;
     font-size: 24px;
-    width: 562px;
-    margin: 60px 0 30px 0;
+    margin: 0 0 30px 0;
     text-align: center;
 }
 
 .container input, textarea{
-    width: 370px;
+    width: 33%;
     background-color: #F2F2F2;
     border: 3px solid rgb(77, 85, 244);
     padding: 12px 15px;
@@ -71,7 +70,7 @@ textarea{
 }
 
 .container button{
-    width: 370px;
+    width: 33%;
     padding: 14px 0;
     background: var(--main-btn-blue);
     border-radius: 100px;
@@ -90,4 +89,28 @@ textarea{
 
 .disable{
     display: none;
+}
+
+@media screen and (max-width: 1200px) {
+    .container{
+        max-width: 970px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .container{
+        max-width: 750px;
+    }
+    .container input, textarea{
+        width: 100%;
+    }
+    .container button{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .container{
+        max-width: none;
+    }
 }

@@ -7,9 +7,13 @@ import { useEffect, useState } from 'react'
 
 
 const Modal = ({active, setActive, children}) => {
-    if(active){
-        document.body.style.overflow = "hidden";
-    }
+    useEffect(() => {
+        if(active){
+            let pos = window.scrollY;
+            document.body.style.position = 'fixed';
+            document.body.style.top = -pos + "px"
+        }
+    }, [])
     return (
         <div className={s.container} onClick={() => {
                 setActive(false);

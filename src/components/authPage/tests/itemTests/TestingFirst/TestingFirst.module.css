@@ -51,15 +51,14 @@
 
 .img{
     text-align: center;
-    width: 230px;
-    height: 230px;
+    width: 23%;
+    height: 23%;
     margin-top: 30px;
 }
 .btn{
     background-color: #FCFCFC;
     padding: 10px;
     border: 1px solid #E0E0E0;
-    width: 170px;
     border-radius: 10px;
     margin: 30px 15px;
     outline: none;
@@ -90,4 +89,31 @@
 
 .bodyResult p {
     margin-left: 15px;
+}
+@media screen and (max-width: 1200px) {
+    .container{
+        max-width: 970px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .container{
+        max-width: 750px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .container{
+        max-width: none;
+    }
+    .img{
+        width: 50%;
+        height: 50%;
+    }
+    .top{
+        flex-direction: column;
+    }
+    .bodyResult{
+        font-size: 14px;
+    }
 }

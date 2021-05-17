@@ -11,7 +11,7 @@ const ItemTest = (props) => {
             <div className={s.container__rigth}>
                 <p>{props.reducer.name}</p>
                 <p><img src={question} className={s.que}/></p>
-                <p>{props.reducer.questions}</p>
+                <p className={s.countQuestion}>{props.reducer.questions}</p>
             </div>
             <div className={s.progress}></div>
         </div>

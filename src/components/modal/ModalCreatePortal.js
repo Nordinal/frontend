@@ -20,7 +20,9 @@ const ModalCreatePortal = (props) => {
         >
             <Modal  className={modal.modal} active={props.active} setActive={() => {
             props.setActive();
-            document.body.style.overflow = "visible";
+            document.body.style.position = '';
+            window.scrollTo(0, -parseInt(document.body.style.top, 10));
+            document.body.style.top = '';
         }}>{props.inner}</Modal></CSSTransition>, document.getElementById('root'))
     )
 }

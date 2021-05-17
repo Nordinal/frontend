@@ -1,7 +1,7 @@
 import store from '../../redux/reduxStore'
 
 const init = () => {
-    store.dispatch({type: 'INIT'})
+    store.dispatch({type: 'fsdfsdf'})
 }
 
 export default init;

@@ -15,6 +15,10 @@ const AuthPage = (props) => {
     const changeActiveLink = (e) => {
         console.log(e.target)
     }
+    useEffect(()=>{
+        document.body.style.backgroundColor = "#F2F2F2"
+        return () => document.body.style.backgroundColor = ""
+    }, [])
     return(
         <div className={s.container}>
             <header className={s.header}>
@@ -36,7 +40,7 @@ const AuthPage = (props) => {
                     <NavLink activeClassName={s.active}  to="/auth/tests" className={s.nav__link} >Тесты</NavLink>
                     <NavLink activeClassName={s.active}  to="/auth/feedback" className={s.nav__link} >Обратная связь</NavLink>
                 </section>
-                <section>
+                <section className={s.content}>
                     <Route path='/auth/profile' render={() => <ProfileContainer />} />
                     <Route path="/auth/tests" render={() => <TestsContainer />} />
                     {/* <Route path='/auth/feedback' render={() => <AuthPage />} /> */}

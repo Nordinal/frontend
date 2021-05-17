@@ -3,11 +3,11 @@
 }
 
 .container{
-    max-width: 1170px;
+    max-width: 1200px;
     width: 100%;
     margin: 0 auto;
     display: flex;
-    height: 257px;
+    padding: 0 15px;
 }
 
 .logoDiv {
@@ -23,12 +23,13 @@
 
 .content {
     display: flex;
+    flex-wrap: wrap;
     margin-left: 8px;
     margin-top: 50px;
 }
 
 .contentLeft{
-    width: 340px;
+    
 }
 
 .contentLeft h3{
@@ -52,7 +53,7 @@
 
 .socials img{
     border-radius: 50%;
-    transition: all .2s linear;
+    transition: background .2s linear;
 }
 .socials img:hover{
     background-color: #005485;
@@ -64,8 +65,6 @@
     flex-direction: column;
     flex-wrap: wrap;
     align-items: space-between;
-    height: 120px;
-    width: 300px;
 }
 
 .nav a {
@@ -79,11 +78,27 @@
     color: #555;
 }
 
-.navDiv{
-    margin-left: 30px;
-}
+
 
 .navDiv h3{
     font-family: mBlack;
     font-size: 16px;
+}
+
+@media screen and (max-width: 1200px) {
+    .container{
+        max-width: 970px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .container{
+        max-width: 750px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .container{
+        max-width: none;
+    }
 }

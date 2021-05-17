@@ -18,11 +18,10 @@
 
 .content {
     max-height: 90vh;
-    overflow-y: auto;
-    overflow-x: hidden;
     z-index: 2;
-    width: 55vw;
-    padding: 20px;
+    max-width: 1200px;
+    width: 100%;
+    padding: 10px 15px;
     background-color: white;
     position: relative;
     border-radius: 0 0 5px 5px;
@@ -33,6 +32,7 @@
 
 .content img{
     height: 100%;
+    width: 100%;
 }
 
 .title{
@@ -41,9 +41,10 @@
     font-family: mBlack;
     color: white;
     font-size: 18px;
-    top: 0px;
     background: var(--main-btn-blue);
-    width: 55vw;
+    max-width: 1200px;
+    width: 100%;
+    padding: 12px 15px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -59,4 +60,34 @@
 
 .title img:hover{
     box-shadow: 0 0 10px salmon;
+}
+@media screen and (max-width: 1200px) {
+    .content{
+        max-width: 970px;
+    }
+    .title{
+        max-width: 970px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .content{
+        max-width: 750px;
+    }
+    .title{
+        max-width: 750px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .content{
+        max-width: none;
+    }
+    .title{
+        max-width:none;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    
 }

@@ -65,7 +65,6 @@ const TestingFirst = (props) => {
                 </div>
                 <p className={s.title}>{result.title}</p>
                 <div className={s.bodyResult}>
-                    <img src={demo} className={s.img}/>
                     <p>{result.desc}</p>
                 </div>
                 <div className={s.bottom}>

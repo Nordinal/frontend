@@ -1,16 +1,18 @@
 .container{
-    max-width: 1170px;
+    max-width: 1200px;
     width: 100%;
     margin: 0 auto;
+    padding: 0 15px;
 }
 
 .main {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .main div {
-    width: 270px;
+    width: 23%;
     text-align: center;
 }
 
@@ -28,4 +30,29 @@
 .desc{
     font-family: mRegular;
     font-size: 18px;
+}
+
+@media screen and (max-width: 1200px) {
+    .container{
+        max-width: 970px;
+    }
+    .main div {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .container{
+        max-width: 750px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .container{
+        max-width: none;
+    }
+    .main div {
+        width: 100%;
+        text-align: center;
+    }
 }

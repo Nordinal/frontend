@@ -5,19 +5,25 @@ import "slick-carousel/slick/slick-theme.css";
 import "./slick-theme.css";
 import vector from '../../../img/vector.svg'
 import ItemSection6 from './itemSection6/ItemSection6';
-import ModalSection6 from './itemSection6/ModalSection6';
-import {useState} from 'react'
 
 const Section6 = (props) => {
 
-    const settings = {
+    let settings = {
       dots: true,
       infinite: true,
       speed: 500,
       slidesToShow: 4,
       slidesToScroll: 1,
-      className: 'slick'
     }
+    const mediaQuery = window.matchMedia('(max-width: 767px)')
+      if (mediaQuery.matches) {
+        settings = {
+          ...settings,
+          slidesToShow: 1,
+          arrows: false
+        }
+      }
+    console.log(settings)
     const items = props.reducer.content.map((item, index) => <ItemSection6 name={item.name} img={item.img} imageModal={item.imageModal}/>);
     return (
       <div className={s.container} id="section6">

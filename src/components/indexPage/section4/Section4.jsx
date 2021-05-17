@@ -12,7 +12,7 @@ const Section4 = () => {
                 <h3 className={s.mainText}>Целевое обучение - большое преимущество<img src={vector}/></h3>
             </div>
             <div className={s.main}>
-                <div><img src={s41}/><p className={s.desc}>Зачисление до первой волны.
+                <div><img src={s41} className={s.img}/><p className={s.desc}>Зачисление до первой волны.
 В случае неудачи сможете поступить с основным потоком</p></div>
                 <div><img src={s42}/><p className={s.desc}>Бесплатное обучение. Обеспечение жильем и стипендией на время учебы</p></div>
                 <div><img src={s43}/><p className={s.desc}>Гарантированное трудоустройство. Прохождение практики на “своем” предприятии</p></div>

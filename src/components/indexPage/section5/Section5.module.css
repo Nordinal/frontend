@@ -3,9 +3,7 @@
     background-image: url(../../../img/bgSection5.png);
 }
 
-.content{
-    height: 778px;
-}
+
 .contentExit{
     transform: translateX(-100vw);
 }
@@ -15,5 +13,4 @@
 
 .contentEnterActive{
     transform: translateX(-100vw);
-
 }

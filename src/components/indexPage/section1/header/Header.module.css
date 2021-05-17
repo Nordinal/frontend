@@ -36,11 +36,6 @@
     width: 100%;
     left: 0;
 }
-
-.link:not(:first-child){
-    margin-left: 60px;
-}
-
 .main{
     display: flex;
     align-items: center;
@@ -64,4 +59,90 @@
     display: flex;
     background: var(--main-btn-orange);
     outline: none;
+}
+.nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.burger{
+    display: none;
+    margin: 0 10px;
+}
+.burger span{
+    display: block;
+    margin: 5px 0;
+    height: 5px;
+    width: 30px;
+    border-radius: 20px;
+    background-color: white;
+}
+.log{
+    display: flex;
+    align-items: center;
+}
+.burgerNav{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    background: #2f3136;
+    z-index: 1;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    animation-name: anim-burger;
+    animation-duration: .2s;
+    animation-timing-function: linear;
+}
+
+@keyframes anim-burger{
+    0%{
+        transform:translateX(100%)
+    }
+    100%{
+        transform:translateX(0)
+    }
+}
+.burgerNav .link{
+    padding: 15px 30px;
+}
+.btnExit{
+    background: orangered;
+    border: none;
+    color: white;
+    font-family: mRegular;
+    padding: 5px 0;
+}
+
+.bgBurger{
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgb(0, 0, 0, .5);
+}
+
+.disable{
+    display: none;
+}
+@media screen and (max-width: 1200px) {
+    
+}
+
+@media screen and (max-width: 992px) {
+    .nav{
+        display: none;
+    }
+    .burger{
+        display: block;
+    }
+    .link::before{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    
 }

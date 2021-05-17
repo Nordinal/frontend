@@ -38,3 +38,33 @@
 .container:hover{
     background-color: #e6e6e6;
 }
+
+@media screen and (max-width: 1200px) {
+    .container{
+        max-width: 970px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .container{
+        max-width: 750px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .container{
+        max-width: none;
+    }
+}
+@media screen and (max-width: 576px) {
+    .que{
+        display: none;
+        background: #000;
+    }
+    .progress{
+        display: none;
+    }
+    .countQuestion{
+        display: none;
+    }
+}

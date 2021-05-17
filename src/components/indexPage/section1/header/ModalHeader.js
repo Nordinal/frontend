@@ -3,6 +3,7 @@ import {useState, useEffect} from 'react'
 import InputMask from 'react-input-mask';
 import * as axios from "axios"
 import { useHistory } from 'react-router';
+import {user} from '../../../../api/initApi'
 
 
 const ModalHeader = (props) => {
@@ -11,19 +12,19 @@ const ModalHeader = (props) => {
     let history = useHistory();
 
     const handleClick = () => {
-        axios.post("http://localhost:5000/api/user", props.reducer).then((res) => {
-                if(res.data == false){
-                    setActiveErr(true);
-                    props.submitFalse();
-                }
-                else{
-                    setActiveErr(false);
-                    let {email, password, tel} = res.data;
-                    console.log(email, password, tel)
-                    props.submit(email, password, tel);
-                    history.push("/auth/profile");
-                }
-            })
+        user.check(props.reducer).then((res) => {
+            if(res.data == false){
+                setActiveErr(true);
+                props.submitFalse();
+            }
+            else{
+                setActiveErr(false);
+                let {email, password, tel} = res.data;
+                console.log(email, password, tel)
+                props.submit(email, password, tel);
+                history.push("/auth/profile");
+            }
+        })
     }
 
     return(
