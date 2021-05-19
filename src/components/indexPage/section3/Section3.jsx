@@ -1,7 +1,7 @@
 import s from './Section3.module.css'
 import vector from '../../../img/vector.svg'
 import ItemSection3 from './ItemSection3/ItemSection3'
-import {useState} from 'react'
+import {useEffect, useState} from 'react'
 
 
 const Section3 = (props) => {
@@ -10,6 +10,9 @@ const Section3 = (props) => {
     const showContent = () => {
         setShow(!show);
     }
+    useEffect(()=>{
+        props.initAboutUs();
+    },[])
 
     return (
             <div className={s.content} id="section3">

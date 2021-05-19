@@ -1,7 +1,9 @@
 import * as axios from 'axios'
 
+let baseURL = "http://localhost:5000/api/"
+
 const initinal = axios.create({
-    baseURL: "http://localhost:5000/api/"
+    baseURL: baseURL
 })
 
 export const init = {
@@ -9,11 +11,23 @@ export const init = {
         return initinal.get("tag").then((res) => {
             return res.data.tag;
         })
+    },
+    getAboutUs: () => {
+        return initinal.get("about").then((res) => {
+            res.data.map((item) => item.image = baseURL + item.image);
+            return res.data;
+        })
     }
 }
 
 export const user = {
     check: (reducer) => {
         return initinal.post("user", reducer)
+    }
+}
+
+export const message = {
+    addMessage: (obj) => {
+        return initinal.post("message", obj)
     }
 }

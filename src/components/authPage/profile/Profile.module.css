@@ -20,7 +20,43 @@
     position: relative;
 }
 .num::before{
-    content: "Пароль";
+    content: "Старый пароль";
+    position: absolute;
+    top: -20px;
+    left: 15px;
+    font-family: mRegular;
+    font-size: 14x;
+}
+.email{
+    margin: 30px;
+    position: relative;
+}
+.email::before{
+    content: "Почта";
+    position: absolute;
+    top: -20px;
+    left: 15px;
+    font-family: mRegular;
+    font-size: 14x;
+}
+.numNew{
+    margin: 30px;
+    position: relative;
+}
+.numNew::before{
+    content: "Новый пароль";
+    position: absolute;
+    top: -20px;
+    left: 15px;
+    font-family: mRegular;
+    font-size: 14x;
+}
+.numNew2{
+    margin: 30px;
+    position: relative;
+}
+.numNew2::before{
+    content: "Повторить новый пароль";
     position: absolute;
     top: -20px;
     left: 15px;

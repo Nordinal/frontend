@@ -6,7 +6,6 @@ import arrow from '../../../../img/arrowItemSection5.svg'
 
 
 const ThreeSection = (props) => {
-    console.log(props);
     const direction = props.reducer.institute[props.reducer.active].direction;
 
     const handleClick = (bool) =>{

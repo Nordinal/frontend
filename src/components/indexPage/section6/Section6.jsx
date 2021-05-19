@@ -23,7 +23,6 @@ const Section6 = (props) => {
           arrows: false
         }
       }
-    console.log(settings)
     const items = props.reducer.content.map((item, index) => <ItemSection6 name={item.name} img={item.img} imageModal={item.imageModal}/>);
     return (
       <div className={s.container} id="section6">

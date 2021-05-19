@@ -6,8 +6,11 @@ const Profile = (props) => {
     return(
         <div className={s.container}>
             <div>
+                <p className={s.email}><input className={s.input} value={props.auth.password} onChange={props.changePassword}/></p>
                 <p className={s.tel}><InputMask mask="+7(\999) 999 99 99" className={s.input} value={props.auth.tel} onChange={props.changeTel}/></p>
                 <p className={s.num}><input className={s.input} value={props.auth.password} onChange={props.changePassword}/></p>
+                <p className={s.numNew}><input className={s.input} value={props.auth.password} onChange={props.changePassword}/></p>
+                <p className={s.numNew2}><input className={s.input} value={props.auth.password} onChange={props.changePassword}/></p>
             </div>
             <button className={s.btn}>Сохранить</button>
         </div>

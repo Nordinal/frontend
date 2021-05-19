@@ -5,6 +5,7 @@ import { NavLink, Route, useHistory } from "react-router-dom"
 import ProfileContainer from "./profile/ProfileContainer"
 import TestsContainer from "./tests/TestsContainer"
 import { useEffect, useState } from "react"
+import AdminContainer from "./admin/AdminContainer"
 
 const AuthPage = (props) => {
     let history = useHistory();
@@ -39,11 +40,13 @@ const AuthPage = (props) => {
                     <NavLink activeClassName={s.active} to="/auth/profile" className={s.nav__link} >Личные данные</NavLink>
                     <NavLink activeClassName={s.active}  to="/auth/tests" className={s.nav__link} >Тесты</NavLink>
                     <NavLink activeClassName={s.active}  to="/auth/feedback" className={s.nav__link} >Обратная связь</NavLink>
+                    <NavLink activeClassName={s.active}  to="/auth/admin" className={s.nav__link} >Администрирование</NavLink>
                 </section>
                 <section className={s.content}>
                     <Route path='/auth/profile' render={() => <ProfileContainer />} />
                     <Route path="/auth/tests" render={() => <TestsContainer />} />
                     {/* <Route path='/auth/feedback' render={() => <AuthPage />} /> */}
+                    <Route path="/auth/admin" render={() => <AdminContainer />} />
                 </section>
             </main>
         </div>

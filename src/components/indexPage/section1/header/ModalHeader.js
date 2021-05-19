@@ -20,7 +20,6 @@ const ModalHeader = (props) => {
             else{
                 setActiveErr(false);
                 let {email, password, tel} = res.data;
-                console.log(email, password, tel)
                 props.submit(email, password, tel);
                 history.push("/auth/profile");
             }

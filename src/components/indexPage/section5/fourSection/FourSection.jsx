@@ -5,7 +5,6 @@ import turn from '../../../../img/fourSectionTurn.svg'
 import InputMask from 'react-input-mask';
 
 const FourSection = (props) => {
-    console.log(props)
     const inst = props.reducer.institute[props.reducer.active];
     const direct = inst.direction[props.reducer.activeTurn];
     const handleClick = (bool) =>{

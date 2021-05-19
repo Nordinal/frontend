@@ -6,11 +6,9 @@ const SUBMIT_FALSE = "SUBMIT_FALSE"
 
 let initialStore = {
     email: "",
-    password: "",
     tel: "",
     isLoggin: false,
     currentEmail: "",
-    currentPassword: "",
     currentTel: "",
 }
 

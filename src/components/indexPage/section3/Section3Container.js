@@ -1,5 +1,6 @@
 import Section3 from './Section3'
 import {connect} from 'react-redux'
+import { initAboutUs } from '../../../redux/reducer/reducerSection3';
 
 
 const mstp = (state) => {
@@ -8,9 +9,11 @@ const mstp = (state) => {
     };
 }
 
-const mdtp = (state) => {
+const mdtp = (dispatch) => {
     return {
-
+        initAboutUs: () => {
+            dispatch(initAboutUs());
+        }
     };
 }
 
