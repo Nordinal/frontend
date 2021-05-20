@@ -25,8 +25,21 @@ textarea{
     margin: 0 0 30px 0;
     text-align: center;
 }
+.block{
+    width: 33%;
+    margin-top: 15px;
+    position: relative;
+}
+.count{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-family: mRegular;
+    font-size: 16px;
+    color: rgb(141, 141, 141);
+}
 
-.container input, textarea{
+.container input, .textarea{
     width: 33%;
     background-color: #F2F2F2;
     border: 3px solid rgb(77, 85, 244);
@@ -37,17 +50,17 @@ textarea{
     font-size: 18px;
 }
 
-.container input, textarea:not(:first-child){
+.container input:not(:first-child){
     margin-top: 15px;
 }
 
-.container input, textarea:focus{
+.container input, .textarea:focus{
     outline: none;
 }
 
-
-.container textarea{
+.textarea{
     height: 260px;
+    width: 100%;
 }
 
 .imgBg {
@@ -101,7 +114,10 @@ textarea{
     .container{
         max-width: 750px;
     }
-    .container input, textarea{
+    .container input{
+        width: 100%;
+    }
+    .block{
         width: 100%;
     }
     .container button{

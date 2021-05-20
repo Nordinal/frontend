@@ -29,5 +29,18 @@ export const user = {
 export const message = {
     addMessage: (obj) => {
         return initinal.post("message", obj)
+    },
+    initRequest: () => {
+        return initinal.get("request").then((res) => {
+            return res.data;
+        })
+    },
+    updateStatusRequest: (id) => {
+        return initinal.post("updatestatusrequest", {id}).then((res) => {
+            return res.data
+        })
+    },
+    deleteRequest: (id) => {
+        return initinal.delete("deleterequest", {id});
     }
 }

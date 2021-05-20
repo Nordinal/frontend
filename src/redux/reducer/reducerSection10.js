@@ -12,6 +12,11 @@ let initialStore = {
 const reducerSection2 = (state = initialStore, action = {}) => {
     switch(action.type){
         case UPDATE_NAME: {
+            if(action.name.length >= 30){
+                return{
+                    ...state
+                }
+            }
             return {
                 ...state,
                 name: action.name
@@ -24,9 +29,16 @@ const reducerSection2 = (state = initialStore, action = {}) => {
             }
         };
         case UPDATE_MESSAGE: {
-            return {
-                ...state,
-                message: action.message
+            if(action.message.length >= 350){
+                return{
+                    ...state
+                }
+            }
+            else{
+                return {
+                    ...state,
+                    message: action.message
+                }
             }
         };
         case IS_FETCHING_TRUE: {

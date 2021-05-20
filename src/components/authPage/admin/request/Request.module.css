@@ -1,0 +1,43 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.top{
+    display: flex;
+}
+
+.top div{
+    width: 50%;
+    font-size: 18px;
+    padding: 20px 0;
+    text-align: center;
+    font-family: mBlack;
+    cursor: pointer;
+}
+.active{
+    background-color: #E0E0E0;;
+}
+.top div:hover{
+    background-color: #E0E0E0;;
+}
+.all{
+    border-radius: 0 10px 0 0;
+}
+.act{
+    border-radius: 10px 0 0 0;
+}
+.exit{
+    display: block;
+    background: #005485;
+    color: white;
+    padding: 2px 0;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.exit:hover{
+    background: #0e6da5;
+}
