@@ -23,7 +23,6 @@ const MenuAdmin = (props) => {
             <div className={s.list}>
                 <NavLink to="/auth/admin/request" className={s.link}>Теги о ЗИД</NavLink>
                 <NavLink to="/auth/admin/request" className={s.link}>Заявки</NavLink>
-                <NavLink to="/auth/admin/request" className={s.link}>Чаты</NavLink>
                 <NavLink to="/auth/admin/request"className={s.link}>Статистика</NavLink>
             </div>
         }

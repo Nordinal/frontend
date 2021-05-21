@@ -3,7 +3,6 @@ import s from './Modal.module.css'
 
 
 const ModalSection2 = ({getModal, changeInput, value, changeTegPerson}) => {
-    
     return (
         <div className={s.container} onClick={getModal}>
             <div className={s.content} onClick={(e) => e.stopPropagation()}>

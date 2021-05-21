@@ -35,6 +35,10 @@ export const updateStatusRequest = (id) => async (dispatch) => {
     }
 }
 export const deleteRequest = (id) => async (dispatch) => {
-    await message.deleteRequest(id);
+    console.log(id)
+    const del = await message.deleteRequest(id);
+    if(del == true){
+        dispatch(initRequest())
+    }
 }
 export default reducerRequest;

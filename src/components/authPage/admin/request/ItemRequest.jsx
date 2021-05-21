@@ -1,9 +1,12 @@
 import s from './ItemRequest.module.css'
 import check from '../../../../img/check.svg'
 import del from '../../../../img/delete.svg'
+import { useState } from 'react'
+import ReactDom from 'react-dom'
 
 
 const ItemRequest = (props) => {
+    const [modal, setModal] = useState(false)
     return(
         <div className={s.container}>
             <p><span className={s.b}>Имя и Фамилия:</span> {props.name}</p>
@@ -14,11 +17,24 @@ const ItemRequest = (props) => {
                     props.updateStatusRequest(props.id);
                     }} />
                 <img src={del} className={s.del} onClick={() => {
-                    props.deleteRequest(props.id);
+                    // props.deleteRequest(props.id);
+                    setModal(true);
                     }}/>
             </div>
+            {modal ? ReactDom.createPortal(
+            <div className={s.containerModal} onClick={() => setModal(false)}>
+                <div className={s.content} onClick={(e) => e.stopPropagation()}>
+                    <p className={s.titleModal}>Удалить заявку от {props.name}?</p>
+                    <button className={s.btnModal + " " + s.green} onClick={() => {
+                        props.updateStatusRequest(props.id);
+                        setModal(false);
+                    }}>Да</button>
+                    <button className={s.btnModal + " " + s.red} onClick={() => setModal(false)}>Нет</button>
+                </div>
+            </div>, document.getElementById('root')) : undefined}
         </div>
     )
 }
 
 export default ItemRequest;
+

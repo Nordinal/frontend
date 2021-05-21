@@ -1,6 +1,6 @@
 import Section2 from './Section2'
 import {connect} from 'react-redux'
-import {updateNewTagCreator, changeTagPersonCreator, initTags} from '../../../redux/reducer/reducerSection2'
+import {updateNewTagCreator, changeTagPersonCreator, initTags, updateLikeTag, updateUnLikeTag, initTagNotFetch, setActiveTag} from '../../../redux/reducer/reducerSection2'
 
 
 const mstp = (state) => {
@@ -19,6 +19,18 @@ const mdtp = (dispatch) => {
         },
         initTags: () => {
             dispatch(initTags())
+        },
+        updateLikeTag: (id) => {
+            dispatch(updateLikeTag(id))
+        },
+        updateUnLikeTag: (id) => {
+            dispatch(updateUnLikeTag(id))
+        },
+        initTagNotFetch: () => {
+            dispatch(initTagNotFetch())
+        },
+        setActiveTag: (id, bool) => {
+            dispatch(setActiveTag(id, bool))
         }
     };
 }

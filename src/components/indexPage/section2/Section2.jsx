@@ -20,10 +20,10 @@ const Section2 = (props) => {
             <h3 className={s.mainText}>Напишите свой тег о ЗИД</h3>
             <p className={s.desc}>Добавь одно слово, с которым у тебя ассоциируется ЗИД</p>
             <div className={s.tags}>
-                {props.reducer.tag.map((item, index) => <Tag reducer={item} key={index}/>)}
+                {props.reducer.tag.map((item, index) => <Tag reducer={item} key={index} updateLikeTag={props.updateLikeTag} updateUnLikeTag={props.updateUnLikeTag} isFetching={props.reducer.isFetching} dataNew={true} setActiveTag={props.setActiveTag} initTagNotFetch={props.initTagNotFetch}/>)}
                 {props.reducer.tagPerson.map((item, index) => <Tag reducer={item} key={index}/>)}
                 <img src={i21} className={s.plus} id="btn" onClick={getModal}/>
-                {activeModal ? <ModalSection2 getModal={getModal} changeInput={props.changeInput} value={props.reducer.newTag} changeTegPerson={props.changeTegPerson}/>: false}
+                {activeModal ? <ModalSection2 getModal={getModal} changeInput={props.changeInput} value={props.reducer.newTag} changeTegPerson={props.changeTegPerson} />: false}
             </div>
 
         </div>

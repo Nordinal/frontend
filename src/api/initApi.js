@@ -9,7 +9,17 @@ const initinal = axios.create({
 export const init = {
     getTags: () => {
         return initinal.get("tag").then((res) => {
-            return res.data.tag;
+            return res.data;
+        })
+    },
+    updateLikeTag: (id) => {
+        return initinal.post("liketag", {id}).then((res) => {
+            return res.data;
+        })
+    },
+    updateUnLikeTag: (id) => {
+        return initinal.post("unliketag", {id}).then((res) => {
+            return res.data;
         })
     },
     getAboutUs: () => {
@@ -41,6 +51,9 @@ export const message = {
         })
     },
     deleteRequest: (id) => {
-        return initinal.delete("deleterequest", {id});
+        console.log(id)
+        return initinal.post("deleterequest", {id}).then((res) => {
+            return res.data
+        });
     }
 }

@@ -65,3 +65,11 @@
         transform: rotate(0);
     }
 }
+
+.disabled{
+    pointer-events: none;
+}
+
+.disable{
+    display: none;
+}
