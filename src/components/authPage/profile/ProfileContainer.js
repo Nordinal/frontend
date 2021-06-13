@@ -1,6 +1,6 @@
 import Profile from './Profile'
 import {connect} from 'react-redux'
-import {checkAuthPassword, changeTel} from '../../../redux/reducer/reducerAuth'
+import {changePhone, changePasswordOld, changePasswordNew, changePasswordRepeatNew, submitChange, successChangeData} from '../../../redux/reducer/reducerAuth'
 
 
 const mstp = (state) => {
@@ -9,18 +9,8 @@ const mstp = (state) => {
     };
 }
 
-const mdtp = (dispatch) => {
-    return {
-        changePassword: (e) => {
-            dispatch(checkAuthPassword(e.target.value))
-        },
-        changeTel: (e) => {
-            dispatch(changeTel(e.target.value));
-        }
-    };
-}
 
-const ProfileContainer = connect(mstp, mdtp)(Profile);
+const ProfileContainer = connect(mstp, { changePhone, changePasswordOld, changePasswordNew, changePasswordRepeatNew, submitChange, successChangeData})(Profile);
 
 
 export default ProfileContainer;

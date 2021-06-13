@@ -13,7 +13,7 @@ const mdtp = (dispatch) => {
     return {
         submitFalse: () => {
             dispatch(submitFalse());
-        }
+        },
     };
 }
 

@@ -1,12 +1,23 @@
 import s from './ModalHeader.module.css'
 import {useState, useEffect} from 'react'
 import InputMask from 'react-input-mask';
-import * as axios from "axios"
 import { useHistory } from 'react-router';
 import {user} from '../../../../api/initApi'
 
 
 const ModalHeader = (props) => {
+    useEffect(() => {
+        document.body.style.position = 'fixed';
+        return () => {
+            document.body.style.position = '';
+        }
+    }, [])
+    useEffect(() => {
+        if(props.reducer.isLoggin){
+            history.push("/auth/profile");  
+        }
+    }, [props.reducer.isLoggin])
+
     const [auth, setAuth] = useState(true);
     const [activeErr, setActiveErr] = useState(false);
     let history = useHistory();
@@ -19,8 +30,8 @@ const ModalHeader = (props) => {
             }
             else{
                 setActiveErr(false);
-                let {email, password, tel} = res.data;
-                props.submit(email, password, tel);
+                let {email, tel, id} = res.data;
+                props.submit(email, tel, id);
                 history.push("/auth/profile");
             }
         })
@@ -38,19 +49,20 @@ const ModalHeader = (props) => {
                         <div className={s.content__inner}>
                             <p className={activeErr? s.err + " " + s.activeErr : s.err}>Неверная почта или пароль</p>
                             <input className={s.input} placeholder="Почта" value={props.reducer.email} onChange={props.changeValueEmail}/>
-                            <input className={s.input} placeholder="Пароль" value={props.reducer.password} onChange={props.changeValuePassword}/>
-                            <label className={s.label}><input type="checkbox" /><p>Запомнить аккаунт</p></label>
+                            <input className={s.input} type="password" placeholder="Пароль" value={props.reducer.password} onChange={props.changeValuePassword}/>
                             <button onClick={handleClick}>Войти</button>
                         </div>
                     </div>
                     <div className={!auth ? s.content : s.disable}>
                         <div className={s.content__inner}>
-                            <input className={s.input} placeholder="Почта"/>
-                            <InputMask  mask="+7(\999) 999 99 99" placeholder="Телефон" className={s.input}/>
-                            <input className={s.input} placeholder="Пароль"/>
-                            <input className={s.input} placeholder="Повтор пароля"/>
-                            <label className={s.label}><input type="checkbox" /><p>Я согласен на <a href="" target="_blank">обработку персональных данных</a></p></label>
-                            <button onClick={() => alert('Сервер не отвечает')}>Регистрация</button>
+                            <p className={s.err + " " + s.activeErr}>{props.reducer.message}</p>
+                            <input className={s.input} placeholder="Почта" onChange={props.updateRegEmail}/>
+                            <InputMask  mask="+7(\999) 999 99 99" placeholder="Телефон" className={s.input} onChange={props.updateRegTel}/>
+                            <input className={s.input} type="password" placeholder="Пароль" onChange={props.updateRegPassword}/>
+                            <input className={s.input} type="password" placeholder="Повтор пароля" onChange={props.updateRegPasswordAgain}/>
+                            <button onClick={() => {
+                                props.sendRegData();
+                            }} disabled={props.reducer.isBlock}>Регистрация</button>
                         </div>
                     </div>
                 </div>

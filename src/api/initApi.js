@@ -1,4 +1,5 @@
 import * as axios from 'axios'
+import { isAdmin } from '../redux/reducer/reducerAuth'
 
 let baseURL = "http://localhost:5000/api/"
 
@@ -33,6 +34,18 @@ export const init = {
 export const user = {
     check: (reducer) => {
         return initinal.post("user", reducer)
+    },
+    register: (data) => {
+        return initinal.post("reg", data)
+    },
+    isAdmin: (id) => {
+        return initinal.post("isadmin", {id})
+    },
+    usercookie: (id) => {
+        return initinal.post("usercookie", {id})
+    },
+    changeUser: (obj) => {
+        return initinal.post('changeuser', obj)
     }
 }
 
@@ -51,7 +64,6 @@ export const message = {
         })
     },
     deleteRequest: (id) => {
-        console.log(id)
         return initinal.post("deleterequest", {id}).then((res) => {
             return res.data
         });

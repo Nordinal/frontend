@@ -13,11 +13,9 @@ const Section10 = (props) => {
     }
     return (
         <>
-            {props.disable ? false 
-            : 
-            <div className={s.bg} id="section10">
-                <img src={bg} className={s.imgBg}/>
-                <div className={s.container}>
+            <div className={!props.admin ? s.bg : s.bgAdmin} id="section10">
+                <img src={bg} className={!props.admin ? s.imgBg : s.disable}/>
+                <div className={!props.admin ? s.container : s.container + " " + s.containerAdmin}>
                     <h2>Оставьте свои контактные данные и наш сотрудник свяжется с вами</h2>
                     <input placeholder="Имя и Фамилия" value={props.reducer.name} onChange={(e) => props.updateName(e.target.value)}/>
                     <InputMask  mask="+7(\999) 999 99 99" placeholder="Телефон" value={props.reducer.tel} onChange={(e) => props.updateTel(e.target.value)}/>
@@ -31,7 +29,6 @@ const Section10 = (props) => {
                     }} disabled={props.reducer.isFetching}>Отправить</button>
                 </div>
             </div>
-            }
             {props.reducer.isOpenModal ? 
             <ModalSection10 message={props.reducer.messageModal} closeModal={() => props.closeModal()}/>
             :

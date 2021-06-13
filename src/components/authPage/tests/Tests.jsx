@@ -19,10 +19,11 @@ const Tests = (props) => {
     return(
         <div className={s.container}>
             {testIsBegin() === false ? 
-                props.tests.content.map((item, index) => <ItemTest toggleIsBegin={props.toggleIsBegin} reducer={item} index={index} key={index}/>)
+                props.tests.content.map((item, index) => <ItemTest toggleIsBegin={props.toggleIsBegin} reducer={item} index={index} key={index} isReady={index == 0 ? localStorage.getItem('test1'):localStorage.getItem('test2')}   
+                />)
             :
                 props.tests.content[currentItem].type === 1 ? 
-                    <TestingFirst tests={props.tests.content[currentItem]} updateResponse={props.updateResponse} currentItem={currentItem} initResult={props.initResult}/>
+                    <TestingFirst tests={props.tests.content[currentItem]} updateResponse={props.updateResponse} currentItem={currentItem} initResult={props.initResult} />
                     :
                     <div>В разработке</div>
             }

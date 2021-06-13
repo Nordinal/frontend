@@ -13,7 +13,7 @@ const ItemTest = (props) => {
                 <p><img src={question} className={s.que}/></p>
                 <p className={s.countQuestion}>{props.reducer.questions}</p>
             </div>
-            <div className={s.progress}></div>
+            <div className={props.isReady == "true" ? s.progress + " " + s.green : s.progress}></div>
         </div>
     )
 }

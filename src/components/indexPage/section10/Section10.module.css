@@ -5,7 +5,6 @@ textarea{
 .bg{
     position: relative;
 }
-
 .container{
     max-width: 1200px;
     padding: 30px 15px;
@@ -25,6 +24,16 @@ textarea{
     margin: 0 0 30px 0;
     text-align: center;
 }
+.containerAdmin h2{
+    color: black;
+    text-align: left;
+    padding: 15px 60px;
+    background: #F2F2F2;
+    border-radius: 10px;
+    font-size: 20px;
+    margin: 0 0 0 0;
+}
+
 .block{
     width: 33%;
     margin-top: 15px;
@@ -49,7 +58,12 @@ textarea{
     font-family: mRegular;
     font-size: 18px;
 }
-
+.containerAdmin input, .textarea{
+    width: 80%;
+}
+.containerAdmin .block{
+    width: 80%;
+}
 .container input:not(:first-child){
     margin-top: 15px;
 }
@@ -103,6 +117,10 @@ textarea{
 .disable{
     display: none;
 }
+.bgAdmin{
+    background-color: #fff;
+    border-radius: 10px;
+}
 
 @media screen and (max-width: 1200px) {
     .container{
@@ -115,6 +133,9 @@ textarea{
         max-width: 750px;
     }
     .container input{
+        width: 100%;
+    }
+    .containerAdmin .block{
         width: 100%;
     }
     .block{

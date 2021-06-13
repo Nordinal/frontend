@@ -3,7 +3,12 @@
     border-radius: 10px;
     border: 1px solid #E0E0E0;
 }
-
+.error{
+    margin:  15px 30px;
+    color: tomato;
+    font-size: 18px;
+    font-family: mRegular;
+}
 .input{
     background-color: #F2F2F2;
     padding: 10px 20px;
@@ -90,6 +95,41 @@
 
 .btn:hover{
     background: #024369;
+}
+.modalBack{
+    background-color: rgba(0,0,0,.5);
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    pointer-events: none;
+
+    z-index: 1;
+    pointer-events: all;
+}
+.modalContent{
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    font-size: 18px;
+    font-family: mRegular;
+    text-align: center;
+}
+.modalContent button{
+    margin-top: 8px;
+    padding: 4px 12px;
+    background-color: #4AE396;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+.modalContent button:hover{
+    background-color: #34c47c;
 }
 @media screen and (max-width: 1200px) {
     .container{

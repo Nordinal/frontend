@@ -46,7 +46,7 @@ const Header = (props) => {
                 <a href='#section3' className={s.link} onClick={activeBurger ? activeBurgers : false}>О нас</a>
                 <a href='#section7' className={s.link} onClick={activeBurger ? activeBurgers : false}>Предложения</a>
                 <a href='#section4' className={s.link} onClick={activeBurger ? activeBurgers : false}>Преимущества</a>
-                <a href='#section5' className={s.link} onClick={activeBurger ? activeBurgers : false}>Целевое обучени</a>
+                <a href='#section5' className={s.link} onClick={activeBurger ? activeBurgers : false}>Целевое обучение</a>
                 <a href='#section9' className={s.link} onClick={activeBurger ? activeBurgers : false}>Тесты</a>
                 <button className={btnExit} onClick={activeBurgers}>Закрыть</button>
             </nav>
@@ -59,7 +59,7 @@ const Header = (props) => {
                 <button className={s.btn} onClick={handleClick}><img src={profile} alt='профиль' className={s.profile} className={s.loggin} /></button>
             </div>
             <div className={bgBurger} onClick={activeBurgers}></div>
-            <ModalHeaderContainer isActiveModal={isActiveModal} setIsActiveModal={() => setisActiveModal(false)}/>
+            {isActiveModal ? <ModalHeaderContainer isActiveModal={isActiveModal} setIsActiveModal={() => setisActiveModal(false)}/> : undefined}
         </div>
     );
 }

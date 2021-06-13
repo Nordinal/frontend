@@ -38,11 +38,14 @@
     margin-right: 20%;
 }
 
-.scale{
+.progress{
     margin-left: 30px;
     width: 100px;
     border-bottom: 15px solid rgba(242,242,242,1);
     border-radius: 100px;
+}
+.green{
+    border-bottom: 15px solid #4AE396;
 }
 @media screen and (max-width: 1200px) {
     

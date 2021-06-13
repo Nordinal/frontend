@@ -161,7 +161,7 @@ const UPDATE_ACTIVE = 'UPDATE_ACTIVE'
 const UPDATE_ACTIVE_TURN = 'UPDATE_ACTIVE_TURN'
 const DISABLE_SECTION10 = "DISABLE_SECTION10"
 
-export const updateActiveCreator = (index) => ({
+export const updateActive = (index) => ({
     type: UPDATE_ACTIVE,
     index: index,
 });

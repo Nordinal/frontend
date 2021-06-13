@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import s from './TestingFirst.module.css'
-import demo from '../../../../../img/testsDemo.svg'
 
 
 const TestingFirst = (props) => {
@@ -35,10 +34,10 @@ const TestingFirst = (props) => {
             props.updateResponse(bool, count, props.currentItem);
             setCount(++count);
         }else{
+            localStorage.setItem('test1', true)
             props.updateResponse(bool, count, props.currentItem);
             setCount(++count);
             let max = Math.max(...props.tests.result);
-            console.log(max)
             if(max == 0){
                 setResult({
                     title: "Вы ни разу не нажали кнопку да :(",
@@ -79,14 +78,15 @@ const TestingFirst = (props) => {
                     </div>
                     <p className={s.title}>{props.tests.questionsList[count].title}</p>
                     <div className={s.body}>
-                        <img src={demo} className={s.img}/>
+                        {console.log(props.tests.questionsList[count].img)}
+                        <img src={props.tests.questionsList[count].img} className={s.img}/>
                         <div>
                             <button onClick={handleClickTrue} className={s.btn}>Да</button>
                             <button onClick={handleClickFalse} className={s.btn}>Нет</button>
                         </div>
                     </div>
                     <div className={s.bottom}>
-                        <p>{count}/{props.tests.questionsList.length}</p>
+                        <p>{count + 1}/{props.tests.questionsList.length}</p>
                     </div>
                 </div>
             }

@@ -10,12 +10,6 @@ const mstp = (state) => {
     }
 }
 
-const mdtp = () => {
-    return {
-
-    }
-}
-
 const Section10Container = connect(mstp, {updateName, updateTel, updateMessage, addMessage, closeModal})(Section10);
 
 export default Section10Container;

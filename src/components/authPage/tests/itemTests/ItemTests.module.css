@@ -4,7 +4,9 @@
     width: 100px;
     height: 15px;
 }
-
+.green{
+    border-bottom: 15px solid #4AE396;
+}
 .container{
     display: flex;
     justify-content: space-between;
@@ -14,12 +16,13 @@
     padding: 20px 15px;
     cursor: pointer;
 }
-
 .container:first-child{
-    border: none;
+    border-top: none;
+    border-radius: 10px 10px 0 0;
 }
 .container:last-child{
-    border: none;
+    border-bottom: none;
+    border-radius: 0 0 10px 10px;
 }
 .container__rigth{
     display: flex;

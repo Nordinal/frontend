@@ -18,7 +18,7 @@ const Request = (props) => {
         {toggle ? 
         props.reducer.content.map((item, index) => !item.status ?<ItemRequest name={item.name} tel={item.tel} message={item.message} status={item.status} id={item._id} updateStatusRequest={(id) => props.updateStatusRequest(id)} key={index} deleteRequest={props.deleteRequest}/> : undefined)
         :
-        props.reducer.content.map((item, index) => item.status ? <ItemRequest name={item.name} tel={item.tel} message={item.message} status={item.status} id={item._id} key={index}/> : undefined)
+        props.reducer.content.map((item, index) => item.status ? <ItemRequest name={item.name} tel={item.tel} message={item.message} status={item.status} id={item._id} key={index} deleteRequest={props.deleteRequest}/> : undefined)
         }
     </div>
     )

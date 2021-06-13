@@ -8,7 +8,7 @@ const Section9 = (props) =>{
         <div className={s.container} id="section9">
             <h2>Тесты<img src={vector} /></h2>
             <div className={s.content}>
-                {props.reducer.content.map((item, index) => <ItemSection9 toggleIsBegin={props.toggleIsBegin}index={index} auth={props.auth} name={item.name} questions={item.questions}/>)}
+                {props.reducer.content.map((item, index) => <ItemSection9 toggleIsBegin={props.toggleIsBegin}index={index} auth={props.auth} name={item.name} questions={item.questions} isReady={index == 0 ? localStorage.getItem('test1'):localStorage.getItem('test2')} />)}
             </div>
         </div>
     )

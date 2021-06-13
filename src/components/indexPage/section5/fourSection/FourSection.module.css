@@ -67,6 +67,7 @@
 .container{
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .elem{
@@ -136,7 +137,14 @@
     width: 64px;
     margin-right: 12px;
 }
-
+.count{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-family: mRegular;
+    font-size: 16px;
+    color: rgb(141, 141, 141);
+}
 @media screen and (max-width: 1200px) {
     .container{
         max-width: 970px;

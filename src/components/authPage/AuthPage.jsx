@@ -6,8 +6,11 @@ import ProfileContainer from "./profile/ProfileContainer"
 import TestsContainer from "./tests/TestsContainer"
 import { useEffect, useState } from "react"
 import AdminContainer from "./admin/AdminContainer"
+import Section10Container from '../indexPage/section10/Section10Container'
+import {user} from '../../api/initApi'
 
 const AuthPage = (props) => {
+    const [isAdmin, setIsAdmin] = useState(false);
     let history = useHistory();
     const handleClick = () => {
         history.push("/")
@@ -17,9 +20,22 @@ const AuthPage = (props) => {
         console.log(e.target)
     }
     useEffect(()=>{
+        if(!localStorage.getItem("id")){
+            history.push("/")
+        }
         document.body.style.backgroundColor = "#F2F2F2"
-        return () => document.body.style.backgroundColor = ""
+        return () => document.body.style.backgroundColor = "#fff"
     }, [])
+    useEffect(async ()=>{
+        const result = await user.isAdmin(props.auth.currentID);
+        if(result.data){
+            setIsAdmin(true);
+        }
+        else{
+            setIsAdmin(false);
+        }
+        return () => setIsAdmin(false);
+    })
     return(
         <div className={s.container}>
             <header className={s.header}>
@@ -40,13 +56,15 @@ const AuthPage = (props) => {
                     <NavLink activeClassName={s.active} to="/auth/profile" className={s.nav__link} >Личные данные</NavLink>
                     <NavLink activeClassName={s.active}  to="/auth/tests" className={s.nav__link} >Тесты</NavLink>
                     <NavLink activeClassName={s.active}  to="/auth/feedback" className={s.nav__link} >Обратная связь</NavLink>
-                    <NavLink activeClassName={s.active}  to="/auth/admin" className={s.nav__link} >Администрирование</NavLink>
+                    {isAdmin ?
+                    <NavLink activeClassName={s.active}  to="/auth/admin" className={s.nav__link} >Администрирование</NavLink> : undefined}
                 </section>
                 <section className={s.content}>
                     <Route path='/auth/profile' render={() => <ProfileContainer />} />
                     <Route path="/auth/tests" render={() => <TestsContainer />} />
-                    {/* <Route path='/auth/feedback' render={() => <AuthPage />} /> */}
-                    <Route path="/auth/admin" render={() => <AdminContainer />} />
+                    <Route path='/auth/feedback' render={() => <Section10Container admin={true}/>} />
+                    {isAdmin ? <Route path="/auth/admin" render={() => <AdminContainer />} /> : undefined}
+                    
                 </section>
             </main>
         </div>

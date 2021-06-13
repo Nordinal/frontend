@@ -1,36 +1,55 @@
+import img1 from '../../img/engenner/1.jpeg'
+import img2 from '../../img/engenner/2.jpeg'
+import img3 from '../../img/engenner/3.jpg'
+import img4 from '../../img/engenner/4.jpg'
+import img5 from '../../img/engenner/5.jpg'
+import img6 from '../../img/engenner/6.jpg'
+import img7 from '../../img/engenner/7.jpg'
+import img11 from '../../img/engenner/1-min.jpg'
+import img22 from '../../img/engenner/2-min.jpg'
+import img33 from '../../img/engenner/3-min.jpg'
+import img44 from '../../img/engenner/4-min.jpg'
+import img55 from '../../img/engenner/5-min.jpg'
+import img66 from '../../img/engenner/6-min.jpg'
+import img77 from '../../img/engenner/7-min.jpg'
 
 
 const initialState = {
     content: [
         {
+            name: 'Инженер-конструктор',
+            img: img7,
+            imageModal: img77
+        },
+        {
             name: 'Инженер-технолог',
-            img: 'https://delai-vibor.com/wp-content/uploads/2019/06/Image1560770452137.jpeg',
-            imageModal: 'https://i.ibb.co/p4pCVt1/image.png'
+            img: img1,
+            imageModal: img11
         },
         {
             name: 'Инженер-программист',
-            img: 'https://habrastorage.org/webt/rg/lr/sp/rglrspzhwpbzs7pn6onqjnnozks.jpeg',
-            imageModal: 'https://i.ibb.co/D1NjgpT/2.png'
+            img: img2,
+            imageModal: img22
         },
         {
             name: 'Инженер-электроник',
-            img: 'https://skolko-poluchaet.ru/wp-content/uploads/2017/11/inzhener-elektronik-1.jpg',
-            imageModal: 'https://i.ibb.co/yW788Lq/3.png'
+            img: img3,
+            imageModal: img33
         },
         {
             name: 'Инженер-механик',
-            img: 'https://intalent.pro/sites/default/files/styles/new_photo_in_article/public/foto/article/7_14.jpg?itok=5MmYohZC',
-            imageModal: 'https://i.ibb.co/k42SQcc/4.png'
+            img: img6,
+            imageModal: img66
         },
         {
             name: 'Инженер-металлург',
-            img: 'https://reconomica.ru/wp-content/uploads/2019/01/072018-11072018x0b7436df-84056080.jpg',
-            imageModal: 'https://i.ibb.co/BCD88Gs/5.png'
+            img: img4,
+            imageModal: img44
         },
         {
             name: 'Инженер-метролог',
-            img: 'https://vplate.ru/images/article/thumb/715-0/2020/01/vse-o-professii-inzhener-metrolog-1.jpg',
-            imageModal: 'https://i.ibb.co/k2zt9dV/6.png'
+            img: img5,
+            imageModal: img55
         },
         
     ],

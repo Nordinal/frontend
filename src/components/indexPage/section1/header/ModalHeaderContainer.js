@@ -1,6 +1,6 @@
 import ModalHeader from './ModalHeader'
 import {connect} from 'react-redux'
-import {checkAuthEmail, checkAuthPassword, submit, submitFalse} from '../../../../redux/reducer/reducerAuth'
+import {checkAuthEmail, checkAuthPassword, submit, submitFalse, sendRegData, updateRegEmail, updateRegPassword, updateRegPasswordAgain, updateRegTel} from '../../../../redux/reducer/reducerAuth'
 
 
 const mstp = (state) => {
@@ -17,12 +17,27 @@ const mdtp = (dispatch) => {
         changeValuePassword: (e) => {
             dispatch(checkAuthPassword(e.target.value))
         },
-        submit: (email, password, tel) => {
-            dispatch(submit(email, password, tel))
+        submit: (email, tel, id) => {
+            dispatch(submit(email, tel, id))
         },
         submitFalse: () => {
             dispatch(submitFalse())
-        }
+        },
+        sendRegData: () => {
+            dispatch(sendRegData())
+        },
+        updateRegEmail: (e) => {
+            dispatch(updateRegEmail(e.target.value))
+        },
+        updateRegPassword: (e) => {
+            dispatch(updateRegPassword(e.target.value))
+        },
+        updateRegPasswordAgain: (e) => {
+            dispatch(updateRegPasswordAgain(e.target.value))
+        },
+        updateRegTel: (e) => {
+            dispatch(updateRegTel(e.target.value))
+        },
     };
 }
 
