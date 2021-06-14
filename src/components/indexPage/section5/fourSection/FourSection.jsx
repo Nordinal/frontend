@@ -3,7 +3,6 @@ import s from './FourSection.module.css'
 import arrow from '../../../../img/arrowItemSection5.svg'
 import turn from '../../../../img/fourSectionTurn.svg'
 import InputMask from 'react-input-mask';
-import Section10Container from '../../section10/Section10Container'
 import { useState } from 'react';
 
 const FourSection = (props) => {
@@ -32,8 +31,8 @@ const FourSection = (props) => {
                     <div>
                         <p className={s.title}>Отличный выбор</p>
                         <div className={s.leftContent}>
-                            <div className={s.leftContent__item}><div className={s.widthImg}><img src={inst.img} className={s.image}/></div>{inst.textBtn}</div>
-                            <div className={s.leftContent__item}><img src={turn} className={s.image + " " + s.widthImg}/><div className={s.cont}><p>{direct.textBtn}</p><p>{direct.number}</p></div></div>
+                            <div className={s.leftContent__item}><div className={s.widthImg}><img src={inst.img} alt="институт" className={s.image}/></div>{inst.textBtn}</div>
+                            <div className={s.leftContent__item}><img src={turn} alt="профессия" className={s.image + " " + s.widthImg}/><div className={s.cont}><p>{direct.textBtn}</p><p>{direct.number}</p></div></div>
                         </div>
                     </div>
                     <div>
@@ -47,7 +46,7 @@ const FourSection = (props) => {
                     </div>
                 </div>
                 <div className={s.bottom}>
-                    <button className={s.btnBack} onClick={() => handleClick(false)}><img src={arrow} /></button>
+                    <button className={s.btnBack} onClick={() => handleClick(false)}><img src={arrow} alt="стрелка"/></button>
                     <button className={s.btn} onClick={() => {
                         props.addMessage();
                         setCountTextarea(0);

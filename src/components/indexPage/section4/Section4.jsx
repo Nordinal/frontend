@@ -9,14 +9,14 @@ const Section4 = () => {
     return(
         <div className={s.container} id="section4">
             <div className={s.mainTextDiv}>
-                <h3 className={s.mainText}>Целевое обучение - большое преимущество<img src={vector}/></h3>
+                <h3 className={s.mainText}>Целевое обучение - большое преимущество<img src={vector} alt="стрелка"/></h3>
             </div>
             <div className={s.main}>
-                <div><img src={s41} className={s.img}/><p className={s.desc}>Зачисление до первой волны.
+                <div><img src={s41} alt="приемущество целевого обучения" className={s.img}/><p className={s.desc}>Зачисление до первой волны.
 В случае неудачи сможете поступить с основным потоком</p></div>
-                <div><img src={s42}/><p className={s.desc}>Бесплатное обучение. Обеспечение жильем и стипендией на время учебы</p></div>
-                <div><img src={s43}/><p className={s.desc}>Гарантированное трудоустройство. Прохождение практики на “своем” предприятии</p></div>
-                <div><img src={s44}/><p className={s.desc}>Проходи отдельный конкурс для “целевиков” </p></div>
+                <div><img src={s42} alt="приемущество целевого обучения"/><p className={s.desc}>Бесплатное обучение. Обеспечение жильем и стипендией на время учебы</p></div>
+                <div><img src={s43} alt="приемущество целевого обучения"/><p className={s.desc}>Гарантированное трудоустройство. Прохождение практики на “своем” предприятии</p></div>
+                <div><img src={s44} alt="приемущество целевого обучения"/><p className={s.desc}>Проходи отдельный конкурс для “целевиков” </p></div>
             </div>
         </div>
     )

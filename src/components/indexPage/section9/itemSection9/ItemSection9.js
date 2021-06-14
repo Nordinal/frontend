@@ -26,7 +26,7 @@ const ItemSection9 = (props) => {
                 <h3>{props.name}</h3>
             </div>
             <div className={s.bottom}>
-                <div className={s.question}><img src={question} />{props.questions}</div>
+                <div className={s.question}><img src={question} alt="question"/>{props.questions}</div>
                 <div className={props.isReady == "true" ? s.progress + " " + s.green : s.progress}></div>
             </div>
         </div>

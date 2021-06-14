@@ -17,12 +17,12 @@ const Section3 = (props) => {
     return (
             <div className={s.content} id="section3">
                 <div className={s.container}>
-                    <h3 className={s.mainText}>О нас<img src={vector} className={show ? s.vector : s.vector + " " + s.rotate} onClick={showContent}/></h3>
+                    <h3 className={s.mainText}>О нас<img src={vector} alt="стрелка" className={show ? s.vector : s.vector + " " + s.rotate} onClick={showContent}/></h3>
                 </div>
                 <div className={show ? s.items : s.items + " " + s.disable}>
                     <p className={s.desc}>Познакомься с нами и нашей деятельностью.</p>
                     <div className={s.itemsAll}>
-                        {props.reducer.content.map( (item, index) => <ItemSection3 content={item} index={index}/>)}
+                        {props.reducer.content.map( (item, index) => <ItemSection3 content={item} index={index} key={index}/>)}
                     </div>
                 </div>
             </div>

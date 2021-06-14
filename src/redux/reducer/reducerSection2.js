@@ -20,7 +20,7 @@ const reducerSection2 = (state = initialStore, action = {}) => {
                 return {
                     ...state,
                     newTag: action.text,
-                };
+                }
             }else{
                 return {
                     ...state,
@@ -80,6 +80,7 @@ const reducerSection2 = (state = initialStore, action = {}) => {
             else{
                 localStorage.setItem(`${id}`, "1");
             }
+            return state;
         }
         default:
             return state;

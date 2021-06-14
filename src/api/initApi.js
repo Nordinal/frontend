@@ -1,5 +1,4 @@
 import * as axios from 'axios'
-import { isAdmin } from '../redux/reducer/reducerAuth'
 
 let baseURL = "http://localhost:5000/api/"
 

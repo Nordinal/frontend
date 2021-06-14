@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { changeCurrentTest, initResult, toggleIsBegin, updateResponse } from '../../../redux/reducer/reducerSection9'
+import { initResult, toggleIsBegin, updateResponse, exitTest, updateResult} from '../../../redux/reducer/reducerSection9'
 import Tests from './Tests'
 
 
@@ -9,19 +9,5 @@ const mstp = (state) => {
     }
 }
 
-const mdtp = (dispatch) => {
-    return{
-        toggleIsBegin: (index) => {
-            dispatch(toggleIsBegin(index));
-        },
-        updateResponse: (bool, count, index) => {
-            dispatch(updateResponse(bool, count, index));
-        },
-        initResult: (index) => {
-            dispatch(initResult(index))
-        }
-    }
-}
-
-const TestsContainer = connect(mstp,mdtp)(Tests);
+const TestsContainer = connect(mstp,{initResult, updateResponse, toggleIsBegin, exitTest, updateResult})(Tests);
 export default TestsContainer;

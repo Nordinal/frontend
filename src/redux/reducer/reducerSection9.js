@@ -193,15 +193,100 @@ const initialState = {
         {
             name: 'Тест по истории завода',
             type: 2,
-            questions: '15',
+            questions: '11',
             current: '',
             isBegin: false,
             questionsList: [
+                {
+                    question: "ГДЕ РОДИЛСЯ ВАСИЛИЙ АЛЕКСЕЕВИЧ ДЕГТЯРЕВ?",
+                    img: api + "test1.jpg",
+                    answer: null,
+                    currectAnswer: 1,
+                    currectImg: api + "ctest1.jpg",
+                    choice: ["Ковров", "Тула", "Ижевск", "Сестрорекц"],
+                },
+                {
+                    question: "КАК НАЗЫВАЕТСЯ СНЕГО-БОЛОТОХОД ПРОИЗВОДСТВА «ЗиД»?",
+                    img: api + "test2.jpg",
+                    answer: null,
+                    currectAnswer: 1,
+                    currectImg: api + "ctest2.jpg",
+                    choice: ["Варган", "Бархан", "Сархан", "Шерхан"],
+                },
+                {
+                    question: "КАК РАСШИФРОВЫВАЕТСЯ АББРЕВИАТУРА КОРД?",
+                    img: api + "test3.jpg",
+                    answer: null,
+                    currectAnswer: 1,
+                    currectImg: api + "ctest3.jpg",
+                    choice: ["Координатор движения", "Ковровские оруженийки дегтяревцы", "Коридор рубежа десантированния", "Ковровское оружие дегтярева"],
+                },
+                {
+                    question: "УКАЖИТЕ ПРАВИЛЬНОЕ НАЗВАНИЕ СОВРЕМЕННОГО РОБОТИЗИРОВАННОГО КОМПЛЕКСА ПРОИЗВОДСТВА «ЗиД»",
+                    img: api + "test4.jpg",
+                    answer: null,
+                    currectAnswer: 3,
+                    currectImg: api + "ctest4.jpg",
+                    choice: ["Клязьма", "Ока", "Уводь", "Нерехта"],
+                },
+                {
+                    question: "СКОЛЬКО ОРДЕНОВ РАСПОЛОЖЕНО НА ЦЕНТРАЛЬНЫХ ПРОХОДНЫХ ОАО«ЗиД»?",
+                    img: api + "test5.jpg",
+                    answer: null,
+                    currectAnswer: 1,
+                    currectImg: api + "ctest5.jpg",
+                    choice: ["Два", "Три", "Четыре", "Пять"],
+                },
+                {
+                    question: "КАКОЙ ОБЪЕКТ В НАШЕМ ГОРОДЕ НЕ НОСИТ ИМЯ В.А. ДЕГТЯРЕВА?",
+                    img: api + "test6.jpg",
+                    answer: null,
+                    currectAnswer: 2,
+                    currectImg: api + "ctest6.jpg",
+                    choice: ["Парк", "Школа", "Лагерь", "Дом культуры"],
+                },
+                {
+                    question: "КАК НАЗЫВАЕТСЯ ЗНАМЕНИТЫЙ МОТОЦИКЛ И ФИРМЕННЫЙ МАГАЗИН «ЗиД»?",
+                    img: api + "test7.jpg",
+                    answer: null,
+                    currectAnswer: 3,
+                    currectImg: api + "ctest7.jpg",
+                    choice: ["Восток", "Исток", "Ковровец", "Восход"],
+                },
+                {
+                    question: "КАЖИТЕ НАЗВАНИЕ ЗНАМЕНИТОГО ПЕРЕНОСНОГО ЗЕНИТНО-РАКЕТНОГО КОМПЛЕКСА ПРОИЗВОДСТВА «ЗиД»",
+                    img: api + "test8.jpg",
+                    answer: null,
+                    currectAnswer: 2,
+                    currectImg: api + "ctest8.jpg",
+                    choice: ["Шило", "Дюбель", "Игла", "Капкан"],
+                },
+                {
+                    question: "ДОМ КАКОГО ВЫДАЮЩЕГОСЯ ОРУЖЕЙНИКА РАСПОЛОЖЕН РЯДОМ С ДК НОГИНА НА УЛИЦЕ АБЕЛЬМАНА?",
+                    img: api + "test9.jpg",
+                    answer: null,
+                    currectAnswer: 2,
+                    currectImg: api + "ctest9.jpg",
+                    choice: ["В.Г. ФЕДОРОВА", "М.Т. КАЛАШНИКОВА", "С.В. ВЛАДИМИРОВА", "П.М. ГОРЮНОВА"],
+                },
+                {
+                    question: "УКАЖИТЕ НАЗВАНИЕ МОЛОДЕЖНОГО МОТОВЕЗДЕХОДА ПРОИЗВОДСТВА «ЗиД»",
+                    img: api + "test10.jpg",
+                    answer: null,
+                    currectAnswer: 1,
+                    currectImg: api + "ctest10.jpg",
+                    choice: ["Путешественник", "Робинзон", "Магеллан", "Фермер"],
+                },
+                {
+                    question: "КАК НАЗЫВАЕТСЯ ЕЖЕНЕДЕЛЬНАЯ ГАЗЕТА, ВЫПУСКАЕМАЯ ОАО «ЗиД»?",
+                    img: api + "test11.jpg",
+                    answer: null,
+                    currectAnswer: 2,
+                    currectImg: api + "ctest11.jpg",
+                    choice: ["Заводчанин", "Оружейник", "Дегтяревец", "Рабочий"],
+                },
 
             ],
-            responseList: [
-
-            ]
         },
     ],
 }
@@ -239,6 +324,23 @@ const reducerSection9 = (state = initialState, action = {}) => {
                 content: [...newContent],
             }
         }
+
+        case EXIT_TEST_2: {
+            let newContent = [...state.content];
+            newContent[action.index].isBegin = false;
+            return {
+                ...state,
+                content: [...newContent],
+            }
+        }
+        case UPDATE_RESULT_TEST_2: {
+            let newContent = [...state.content];
+            newContent[1].questionsList[action.active].answer = action.index;
+            return{
+                ...state,
+                content: [...newContent],
+            }
+        }
         default:{
             return state;
         }
@@ -260,5 +362,19 @@ export const updateResponse = (bool, count, index) => ({
 export const initResult = (index) => ({
     type: INIT_RESULT,
     index: index,
+})
+
+// Test 2
+const EXIT_TEST_2 = "EXIT_TEST_2";
+const UPDATE_RESULT_TEST_2 = "UPDATE_RESULT_TEST_2";
+
+export const exitTest = (index) => ({
+    type: EXIT_TEST_2,
+    index
+})
+export const updateResult = (index, active) => ({
+    type: UPDATE_RESULT_TEST_2,
+    index,
+    active,
 })
 export default reducerSection9

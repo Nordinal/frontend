@@ -10,10 +10,11 @@ const Section7 = (props) => {
         setLoop(setInterval(function(){
             setActive(active > 4 ? active = 0 : active++)
         }, 5000))
+        return () => setLoop(undefined)
     }, [])
     return (
         <div className={s.container} id="section7">
-            <h2 className={s.title}>Мы предлагаем<img src={vector} className={s.vector}/></h2>
+            <h2 className={s.title}>Мы предлагаем<img src={vector} alt="стрелка" className={s.vector}/></h2>
             <p className={s.desc}>Развитие, поддержку и лучшее оборудование</p>
             <div className={s.items}>
                 {props.reducer.content.map((item, index) => <ItemSection7 name={item.name} img={item.img} key={index} active={active == index ? true : false} setActive={setActive} index={index} clearTimer={() => clearInterval(loop)}/>)}

@@ -6,8 +6,11 @@ import s from './Request.module.css'
 
 const Request = (props) => {
     useEffect(() =>{
-        props.initRequest();
-    }, []);
+        function init() {
+            props.initRequest();
+        }
+        init();
+    }, [props]);
     const [toggle, setToggle] = useState(true)
     return (<div className={s.container}>
         <div className={s.top}>

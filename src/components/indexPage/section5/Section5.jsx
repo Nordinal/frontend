@@ -1,14 +1,12 @@
 import s from './Section5.module.css'
-import {useState, useEffect} from 'react'
+import {useState} from 'react'
 import MainSection from './mainSection/MainSection'
 import SecondSection from './secondSection/SecondSection'
 import ThreeSection from './threeSection/ThreeSection'
 import FourSection from './fourSection/FourSection'
 import {CSSTransition} from 'react-transition-group'
-import { disableSection10 } from '../section10/Section10Container'
 
 const Section5 = (props) => {
-    const direction = props.reducer.institute[props.reducer.active].direction;
     const [count, setCount] = useState(1); 
     const [foo, setFoo] = useState(1);
     const [anim, setAnim] = useState(false);

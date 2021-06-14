@@ -16,7 +16,7 @@ const Institute = (props) => {
                 setActiveFunc(true);
             }}/>
             <div className={s.imgDiv}>
-                <img src={props.img} className={s.img}/>
+                <img src={props.img} alt="Институт" className={s.img}/>
             </div>
             <div className={props.isActive ? s.titleDiv + ' ' + s.active : s.titleDiv}>
                 <span>{props.text}</span>

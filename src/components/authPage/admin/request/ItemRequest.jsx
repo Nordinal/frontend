@@ -6,7 +6,6 @@ import ReactDom from 'react-dom'
 
 
 const ItemRequest = (props) => {
-    console.log(props)
     const [modal, setModal] = useState(false)
     return(
         <div className={s.container}>
@@ -15,11 +14,11 @@ const ItemRequest = (props) => {
             <p><span className={s.b}>Сообщение:</span> {props.message}</p>
             <div className={s.control}>
                 <div className={!props.status ? undefined : s.disable}>
-                    <img src={check} className={s.check} onClick={() => {
+                    <img src={check} className={s.check} alt="check" onClick={() => {
                         props.updateStatusRequest(props.id);
                         }} />
                 </div>
-                <img src={del} className={s.del} onClick={() => {
+                <img src={del} className={s.del} alt="delete" onClick={() => {
                     setModal(true);
                     }}/>
             </div>

@@ -9,7 +9,7 @@ const ItemSection6 = (props) => {
     return (
         <div>
             <div className={s.container} onClick={() => setActiveModule(true)}>
-                <div><img src={props.img} className={s.img}/></div>
+                <div><img src={props.img} alt="Профессия" className={s.img}/></div>
                 <div className={s.desc}>{props.name}</div>
                 <div className={s.details}>Подробнее →</div>
             </div>

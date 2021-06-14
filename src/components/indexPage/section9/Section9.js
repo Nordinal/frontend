@@ -6,9 +6,9 @@ const Section9 = (props) =>{
 
     return (
         <div className={s.container} id="section9">
-            <h2>Тесты<img src={vector} /></h2>
+            <h2>Тесты<img src={vector} alt="Стрелка"/></h2>
             <div className={s.content}>
-                {props.reducer.content.map((item, index) => <ItemSection9 toggleIsBegin={props.toggleIsBegin}index={index} auth={props.auth} name={item.name} questions={item.questions} isReady={index == 0 ? localStorage.getItem('test1'):localStorage.getItem('test2')} />)}
+                {props.reducer.content.map((item, index) => <ItemSection9 toggleIsBegin={props.toggleIsBegin} index={index} auth={props.auth} name={item.name} questions={item.questions} isReady={index == 0 ? localStorage.getItem('test1'):localStorage.getItem('test2')} key={index}/>)}
             </div>
         </div>
     )

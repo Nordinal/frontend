@@ -78,7 +78,6 @@ const TestingFirst = (props) => {
                     </div>
                     <p className={s.title}>{props.tests.questionsList[count].title}</p>
                     <div className={s.body}>
-                        {console.log(props.tests.questionsList[count].img)}
                         <img src={props.tests.questionsList[count].img} className={s.img}/>
                         <div>
                             <button onClick={handleClickTrue} className={s.btn}>Да</button>

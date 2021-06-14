@@ -16,9 +16,6 @@ const AuthPage = (props) => {
         history.push("/")
         props.submitFalse();
     }
-    const changeActiveLink = (e) => {
-        console.log(e.target)
-    }
     useEffect(()=>{
         if(!localStorage.getItem("id")){
             history.push("/")
@@ -26,21 +23,25 @@ const AuthPage = (props) => {
         document.body.style.backgroundColor = "#F2F2F2"
         return () => document.body.style.backgroundColor = "#fff"
     }, [])
-    useEffect(async ()=>{
-        const result = await user.isAdmin(props.auth.currentID);
-        if(result.data){
-            setIsAdmin(true);
+    useEffect(()=>{
+        function fetchData() {
+            user.isAdmin(props.auth.currentID).then(result => {
+                if(result.data){
+                    setIsAdmin(true);
+                }
+                else{
+                    setIsAdmin(false);
+                }
+            });
         }
-        else{
-            setIsAdmin(false);
-        }
+        fetchData();
         return () => setIsAdmin(false);
-    })
+    }, [props.auth.currentID])
     return(
         <div className={s.container}>
             <header className={s.header}>
                 <div className={s.header__rigth}>
-                    <p className={s.logo} onClick={() => history.push("/")}><img src={logo} className={s.logo__image}/></p>
+                    <p className={s.logo} onClick={() => history.push("/")}><img src={logo} alt="logo" className={s.logo__image}/></p>
                     <div className={s.data}>
                         <p className={s.data__title}>Личный кабинет:</p>
                         <p className={s.data__email}>{props.auth.currentEmail}</p>
@@ -48,7 +49,7 @@ const AuthPage = (props) => {
                     </div>
                 </div>
                 <div>
-                    <button className={s.btnExit} onClick={handleClick}><img src={exitAuth} /></button>
+                    <button className={s.btnExit} onClick={handleClick}><img src={exitAuth} alt="exit"/></button>
                 </div>
             </header>
             <main className={s.main}>

@@ -15,7 +15,6 @@ init();
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter> 
-    {/* basename={process.env.PUBLIC_URL} */}
       <Provider store={store}>
         <App />
       </Provider>

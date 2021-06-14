@@ -27,7 +27,7 @@ const ThreeSection = (props) => {
                     {direction.map( (item, index) => <Direction modal={direction[index].modal}  updateTurn={() => props.updateTurn(index)} isActive={props.reducer.activeTurn === index ? true : false} number={item.number} text={item.textBtn} key={index}>{item.textBtn}</Direction>)}
                 </div>
                 <div className={s.bottom}>
-                    <button className={s.btnBack} onClick={() => handleClick(false)}><img src={arrow} /></button>
+                    <button className={s.btnBack} onClick={() => handleClick(false)}><img src={arrow} alt="стрелка"/></button>
                     <button className={s.btn} onClick={() => handleClick(true)}>Выбрать</button>
                 </div>
             </div>

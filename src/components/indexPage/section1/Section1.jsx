@@ -1,7 +1,6 @@
 import s from './Section1.module.css'
 import i11 from '../../../img/11.png'
 import geo from '../../../img/geo.svg'
-import v11 from '../../../video/11.mp4'
 import HeaderContainer from "./header/HeaderContainer"
 
 

@@ -6,12 +6,12 @@ import i21 from '../../../../img/like.svg'
 const Tags = (props) => {
     useEffect(()=> {
         props.initTags();
-    }, [])
+    }, [props])
     return(
         <div>
             <div  className={s.top}>Теги</div>
             <NavLink to="/auth/admin/" className={s.exit}>🠒</NavLink>
-            {props.reducer.tag.map((item, index) => <div className={s.tag}><p>{item.tag}</p><p className={s.p}>{item.like}<img src={i21} alt="like"/></p></div>)}
+            {props.reducer.tag.map((item, index) => <div key={index} className={s.tag}><p>{item.tag}</p><p className={s.p}>{item.like}<img src={i21} alt="like"/></p></div>)}
         </div>
     )
 }

@@ -22,7 +22,7 @@ const Section2 = (props) => {
             <div className={s.tags}>
                 {props.reducer.tag.map((item, index) => <Tag reducer={item} key={index} updateLikeTag={props.updateLikeTag} updateUnLikeTag={props.updateUnLikeTag} isFetching={props.reducer.isFetching} dataNew={true} setActiveTag={props.setActiveTag} initTagNotFetch={props.initTagNotFetch}/>)}
                 {props.reducer.tagPerson.map((item, index) => <Tag reducer={item} key={index}/>)}
-                <img src={i21} className={s.plus} id="btn" onClick={getModal}/>
+                <img src={i21} className={s.plus} id="btn" alt="plus" onClick={getModal}/>
                 {activeModal ? <ModalSection2 getModal={getModal} changeInput={props.changeInput} value={props.reducer.newTag} changeTegPerson={props.changeTegPerson} />: false}
             </div>
 

@@ -1,10 +1,9 @@
 import s from './Header.module.css'
 import logo from '../../../../img/logo.svg'
 import profile from '../../../../img/profile.svg'
-import { NavLink, useHistory } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 import {useState} from 'react'
 import ModalHeaderContainer from './ModalHeaderContainer'
-import { useEffect } from 'react'
 
 
 const Header = (props) => {
@@ -26,7 +25,7 @@ const Header = (props) => {
     }
     let history = useHistory();
     const handleClick = () =>{
-        if(props.auth.isLoggin == true){
+        if(props.auth.isLoggin === true){
             history.push("/auth/profile")
         }
         else{
@@ -43,11 +42,11 @@ const Header = (props) => {
             <nav className={nav} onClick={(e) =>{
                 e.stopPropagation();
             }}>
-                <a href='#section3' className={s.link} onClick={activeBurger ? activeBurgers : false}>О нас</a>
-                <a href='#section7' className={s.link} onClick={activeBurger ? activeBurgers : false}>Предложения</a>
-                <a href='#section4' className={s.link} onClick={activeBurger ? activeBurgers : false}>Преимущества</a>
-                <a href='#section5' className={s.link} onClick={activeBurger ? activeBurgers : false}>Целевое обучение</a>
-                <a href='#section9' className={s.link} onClick={activeBurger ? activeBurgers : false}>Тесты</a>
+                <a href='#section3' className={s.link} onClick={activeBurger ? activeBurgers : undefined}>О нас</a>
+                <a href='#section7' className={s.link} onClick={activeBurger ? activeBurgers : undefined}>Предложения</a>
+                <a href='#section4' className={s.link} onClick={activeBurger ? activeBurgers : undefined}>Преимущества</a>
+                <a href='#section5' className={s.link} onClick={activeBurger ? activeBurgers : undefined}>Целевое обучение</a>
+                <a href='#section9' className={s.link} onClick={activeBurger ? activeBurgers : undefined}>Тесты</a>
                 <button className={btnExit} onClick={activeBurgers}>Закрыть</button>
             </nav>
             <div className={s.log}>

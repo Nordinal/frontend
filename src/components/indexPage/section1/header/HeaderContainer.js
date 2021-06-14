@@ -1,6 +1,5 @@
 import Header from './Header'
 import {connect} from 'react-redux'
-import {init} from '../../../../redux/reducer/reducerAuth'
 
 
 const mstp = (state) => {

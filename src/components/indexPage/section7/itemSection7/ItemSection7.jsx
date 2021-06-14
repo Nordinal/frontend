@@ -18,7 +18,7 @@ const ItemSection7 = ({name, img, active, setActive, index, clearTimer}) => {
     }
     return (
         <div className={active ? s.container + " " + s.active : s.container} onClick={handleClick}>
-            <img src={img} className={s.img}/>
+            <img src={img} className={s.img} alt="Предложение"/>
             <div className={active ? s.contentActive : s.content}>
                 <div className={active ? s.title + " " + s.titleActive : s.title}>{name}</div>
                 {/* <button className={active ? s.btn : s.disable}>Подробнее</button> */}
