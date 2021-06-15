@@ -2,7 +2,7 @@ const TOGGLE_IS_BEGIN = "TOGGLE_IS_BEGIN"
 const UPDATE_RESPONSE = "UPDATE_RESPONSE"
 const INIT_RESULT = "INIT_RESULT"
 
-const api = 'http://localhost:5000/api/public/'
+const api = 'https://zidprof.herokuapp.com/api/public/'
 
 const initialState = {
     content: [

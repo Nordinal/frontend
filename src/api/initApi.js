@@ -1,6 +1,6 @@
 import * as axios from 'axios'
 
-let baseURL = "http://localhost:5000/api/"
+let baseURL = "https://zidprof.herokuapp.com/api/"
 
 const initinal = axios.create({
     baseURL: baseURL
